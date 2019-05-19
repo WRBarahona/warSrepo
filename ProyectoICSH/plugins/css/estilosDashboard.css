@@ -1,0 +1,23 @@
+#cabecera, #pie{
+	background-color: #5499C7;
+	color: #fff;
+	text-align: center;
+}
+
+#logoItca{
+	height: 100px;
+	width: 190px;
+	margin-top: 20px;
+}
+
+#logoEmpresa{
+	height: 150px;
+	width: 230	px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.card-columns{
+	margin-top: 30px;
+	margin-bottom: 20px;
+}

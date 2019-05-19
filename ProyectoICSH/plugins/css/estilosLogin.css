@@ -1,0 +1,42 @@
+.cabecera{
+
+	background-color: #2471A3;
+	color: #fff;
+	text-align: center;
+}
+
+#sectionLogin{
+	margin-top: 30px;
+	
+}
+
+#logTitle{
+	text-align: center;
+}
+
+.pie{
+	background-color:#2471A3;
+	color: #fff;
+	text-align: center;
+	display: flex;	
+}
+
+/*Imagenes de dashboard*/
+.cabeceraDash{
+
+	background-color: #1A5276;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+button{
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+#logoItca{
+	height: 150px;
+	width: 350px;
+}
+
