@@ -6,7 +6,7 @@ session_start();
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Usuario - Creación y vista de tickets</title>
+	<title>Técnico - Resolución de tickets y vista</title>
 	<meta name="viewpot" content="width=device-width,Initial-escale=1,Maximun-scale=1">
 	<script src="../plugins/js/jquery.js"></script>        
 	<script src="../plugins/js/sweetalert2.all.min.js"></script>
@@ -35,14 +35,14 @@ session_start();
 			<div class="card-columns" id="cartas">
 				<div class="card">
 					<div class="card-header">
-						<h4 class="card-title" align="center">NUEVO TICKET</h4>
-					</div><br>
-					<img  class="rounded mx-auto d-block" class="card-img-top"  src="../img/nuevoReporte.png"><br>
+						<h4 class="card-title" align="center">CERRAR TICKET</h4>
+					</div><br><br>
+					<img  class="rounded mx-auto d-block" class="card-img-top"  src="../img/solucionTicket.png"><br>
 					<div class="card-body" align="center" style="background-color: #ECEFF1">							
 						<p class="card-tetx" align="center">
-							Realice un nuevo ticket de equipo defectuoso o dañado.
+							Actualice el estado del ticket solucionado.
 						</p>
-						<a href="" class="btn btn-secondary" align="">Crear Nuevo Ticket</a>
+						<a href="cierreTicket.php" class="btn btn-secondary" align="">Cerrar Ticket</a>
 					</div>
 				</div>
 				<div class="card">

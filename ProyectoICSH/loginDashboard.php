@@ -11,7 +11,7 @@
 	<script src="plugins/js/sweetalert2.all.min.js"></script>
 	
 </head> 
-<body>
+<body background="img/fondo2.jpg">
 	<header class="cabecera"><!--INICIO DE HEADER-->
 		<div class="container-fluid">
 			<div class="row">
@@ -30,21 +30,23 @@
 	
 	<section id="sectionLogin"><!--INICIO DE SECTION-->
 		<div align="center">
-			<div class="container" >
+			<div class="container">
 				<div class=" col-md-6">				
 					<div class="jumbotron">	
                         <form action="" method="post"> <!--INICIO DE FORMULARIO-->
 							<div class="row">
 								<div class="col-xs-12 col-sm-12 col-md-12  col-lg-12">
-									<h1 class="display-4" id="logTitle">INICIO DE SESIÓN</h1> <br>
+									<h1 class="display-5" id="logTitle">Ingresar</h1> <br>
+									<img class="img-fluid" src="img/sesion.png" alt="Responsive Image" id="logoSesion" style="height: 100px">
 								</div>							
 							</div>						
 							<div class="form-group">
-								<h3>USUARIO</h3>
-                                    <input type="text" class="form-control" placeholder="USUARIO" required name="txtUsuario">
+								<br>
+								<h3>Usuario</h3>
+                                    <input type="text" class="form-control" placeholder="USUARIO" required name="txtUsuario" autofocus="true">
 							</div>
 							<div class="form-group">
-								<h3><img src="" alt="">CONTRASEÑA</h3>
+								<h3><img src="" alt="">Contraseña</h3>
                                      <input type="password" class="form-control" placeholder="CONTRASEÑA" required name="txtContra">
 							</div>
 							<div class="row">
@@ -66,7 +68,9 @@
 					<img class="img-fluid" src="img/itca.png" alt="Responsive Image" id="logoItca">
 				</div>
 				<div class="col-xs-4 col-md-4">
-					<h1 class="display-4">Soluciones Técnicas</h1> 
+					<br><br><br>
+					<p>Copyright ©</p>
+					<p>« Nelson ║ Mario ║ Mariano ║ Adonay ║ William »</p>
 				</div> 
 				<div class="col-xs-4 col-md-4">
 					<img class="img-thumbnail"src="img/logo2.jpg" alt="">
