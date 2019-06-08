@@ -19,13 +19,45 @@ session_start();
 				<div class="col-xs-8 col-md-8">
 					<h1 class="display-4" style="margin-top: 50px;">Soluciones Técnicas</h1>
 				</div> 
-				<div class="col-xs-4 col-md-4">
-					<img class="img-thumbnail"src="../img/logo2.jpg" alt="" id="logoEmpresa">
+				<div class="col-xs-4 col-md-4" style="margin-top: 30px;">
+					<?php 
+						if (isset($_SESSION["usuario"])) {
+							print "Bienvenido ".$_SESSION["usuario"]["nombUsuario"].
+                                            "(".$_SESSION["usuario"]["rol"].").<br>";
+                            print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";	
+                           }
+							else{
+							header("Location:../index.php");
+						}
+					 ?>
 				</div> 
 			</div>
 		</div>
 	</header>
-	
+		<!--INICIO NAV-->
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+	 <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+		<span class="navbar-toggler-icon"></span>	
+	  </button>	
+		<div class="collapse navbar-collapse" id="collapse_target">
+			<span class="navbar-text"></span>
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="frmDashboardCliente.php">INICIO</a>
+				</li>
+ 				<li class="nav-item">
+					<a class="nav-link" href="frmNuevoTicket.php">Nuevo ticket</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#"> </a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#"></a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!--FIN NAV-->
 	<section>
 		<div class="container alert alert-info" role="alert">
 			<center><h1><b>Gestión de ticket</b></h1></center>
@@ -74,9 +106,6 @@ session_start();
 						</div>
 					</form>
 					<!--Fin de formulario--><br>
-					<!--<div class="container-fluid">
-						<center><a href="dashboardAdmin.php" class="btn btn-danger btn-sm">Cancelar</a></center>
-					</div>-->
 				</div>
 			</div>
 		</div>

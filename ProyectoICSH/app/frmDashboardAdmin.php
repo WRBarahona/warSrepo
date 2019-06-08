@@ -16,12 +16,39 @@ session_start();
 	<header id="cabecera">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-xs-8 col-md-8">
+				<div class="col-xs-4 col-md-4">
 					<h1 class="display-4" style="margin-top: 50px;">Soluciones Técnicas</h1>
 				</div> 
 				<div class="col-xs-4 col-md-4">
 					<img class="img-thumbnail"src="../img/logo2.jpg" alt="" id="logoEmpresa">
 				</div> 
+				<div class="col-xs-4 col-md-4" style="margin-top: 30px;">
+						<?php 
+						if (isset($_SESSION["usuario"])) {
+							print "Bienvenido ".$_SESSION["usuario"]["nombUsuario"].
+                                            "(".$_SESSION["usuario"]["rol"].").<br>";
+                            print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";	
+                            if ($_SESSION["usuario"]["rol"]==3) {
+                            	?>
+                            	 <script type="text/javascript">
+                                            $(document).ready(function(){
+                                                Swal.fire({
+												  position: 'top-end',
+												  type: 'success',
+												  title: '¡Bienvenido Administrador!',
+												  showConfirmButton: false,
+												  timer: 1500
+												})  
+                                            });
+                                </script>
+                            	<?php
+                            	}
+							}
+							else{
+							header("Location:../index.php");
+						}
+					 ?>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -65,19 +92,7 @@ session_start();
 						<a href="" class="btn btn-secondary" align="">Buscar Ticket</a>
 					</div>
 				</div>
-				<!--<div class="card">
-					<div class="card-header">
-  					  <h4 class="card-title" align="center">EQUIPOS</h4>
-  					</div><br>
-					<img  class="rounded mx-auto d-block" class="card-img-top"  src="../img/equipo.png"><br>
-						<div class="card-body" align="center" style="background-color: #ECEFF1">							
-							<p class="card-tetx" align="center">
-								Ingrese, busque, vea y modifique información de los equipos.
-							</p>
-							<a href="" class="btn btn-secondary" align="">Administrar Equipos</a>
-						</div>
-					</div>-->
-					<div class="card">
+				<div class="card">
 						<div class="card-header">
 							<h4 class="card-title" align="center">USUARIOS</h4>
 						</div><br>
@@ -92,19 +107,16 @@ session_start();
 					<div class="card">
 						<div class="card-header">
 							<h4 class="card-title" align="center">LOGOUT</h4>
-						</div><br>	
-						<img  class="rounded mx-auto d-block" class="card-img-top" src="../img/cerrarSesion.png"><br>
-						<div class="card-body" align="center">						
-							<div class="card-footer"  style="background-color: #ECEFF1">
-								<button  class='btn btn-danger btn-lg'><a style='text-decoration:none; color:#fff' href='../loginDashboard.php'>Cerrar sesión</a></button>
-							</div>							
-						</div>
+						</div> 					 					
+						<div class="card-footer"  style="text-align: center;">
+								<?php 
+									if (isset($_SESSION["usuario"])) {							
+		                            print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";	
+									}
+								?>
+						</div>				 
 					</div>				
 				</div>
-
-
-
-
 			</div>
 		</section>
 

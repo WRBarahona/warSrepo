@@ -33,7 +33,7 @@
 			<div class="container">
 				<div class=" col-md-6">				
 					<div class="jumbotron">	
-                        <form action="" method="post"> <!--INICIO DE FORMULARIO-->
+                        <form action="app/acceso.php" method="post"> <!--INICIO DE FORMULARIO-->
 							<div class="row">
 								<div class="col-xs-12 col-sm-12 col-md-12  col-lg-12">
 									<h1 class="display-5" id="logTitle">Ingresar</h1> <br>
@@ -43,7 +43,8 @@
 							<div class="form-group">
 								<br>
 								<h3>Usuario</h3>
-                                    <input type="text" class="form-control" placeholder="USUARIO" required name="txtUsuario" autofocus="true">
+                                    <input type="text" class="form-control" placeholder="USUARIO" required 
+                                    name="txtUsuario" autofocus="true">
 							</div>
 							<div class="form-group">
 								<h3><img src="" alt="">Contraseña</h3>
@@ -51,7 +52,7 @@
 							</div>
 							<div class="row">
 								<div class="col-xs-12 col-sm-12 col-md-12  col-lg-12">
-                                    <input type="submit" class="btn btn-secondary" value="INICIAR SESION" name="btnIngresar1">
+                                    <input type="submit" class="btn btn-secondary" value="INICIAR SESION" name="btnIngresar">
 								</div>							
 							</div>						
 						</form><!--FIN DE FORMULARIO-->

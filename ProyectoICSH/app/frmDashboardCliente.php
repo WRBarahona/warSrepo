@@ -3,7 +3,7 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<title>Usuario - Creación y vista de tickets</title>
@@ -21,10 +21,28 @@ session_start();
 					<img class="img-fluid" src="../img/itca.png" alt="Responsive Image" id="logoItca">
 				</div>
 				<div class="col-xs-4 col-md-4">
-					<h1 class="display-4">Soluciones Técnicas</h1> 
-				</div> 
-				<div class="col-xs-4 col-md-4">
 					<img class="img-thumbnail"src="../img/logo2.jpg" alt="" id="logoEmpresa">
+				</div> 
+				<div class="col-xs-4 col-md-4" style="margin-top: 30px;">
+					<?php 
+						if (isset($_SESSION["usuario"])) {
+							print "Bienvenido ".$_SESSION["usuario"]["nombUsuario"].
+                                            "(".$_SESSION["usuario"]["rol"].").<br>";
+                            print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";	
+                            if ($_SESSION["usuario"]["rol"]==1) {
+                            	?>
+                            	 <script type="text/javascript">
+                                            $(document).ready(function(){
+                                                Swal.fire('¡Bienvenido/a cliente!');   
+                                            });
+                                </script>
+                            	<?php
+                            	}
+							}
+							else{
+							header("Location:../index.php");
+						}
+					 ?>
 				</div> 
 			</div>
 		</div>
@@ -42,7 +60,7 @@ session_start();
 						<p class="card-tetx" align="center">
 							Realice un nuevo ticket de equipo defectuoso o dañado.
 						</p>
-						<a href="" class="btn btn-secondary" align="">Crear Nuevo Ticket</a>
+						<a href="frmNuevoTicket.php" class="btn btn-secondary" align="">Crear Nuevo Ticket</a>
 					</div>
 				</div>
 				<div class="card">
@@ -60,13 +78,14 @@ session_start();
 				<div class="card">
 					<div class="card-header">
 						<h4 class="card-title" align="center">LOGOUT</h4>
-					</div><br>	
-					<img  class="rounded mx-auto d-block" class="card-img-top" src="../img/cerrarSesion.png"><br>
-					<div class="card-body" align="center">						
-						<div class="card-footer"  style="background-color: #ECEFF1">
-							<button  class='btn btn-danger btn-lg'><a style='text-decoration:none; color:#fff' href='../loginDashboard.php'>Cerrar sesión</a></button>
-						</div>							
-					</div>
+					</div> 					 					
+					<div class="card-footer"  style="text-align: center;">
+							<?php 
+								if (isset($_SESSION["usuario"])) {							
+	                            print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";	
+								}
+							?>
+					</div>				 
 				</div>				
 			</div>
 
