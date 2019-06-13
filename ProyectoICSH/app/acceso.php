@@ -27,7 +27,7 @@ if (isset($_REQUEST["btnIngresar"])) {
 	$contra = $_REQUEST["txtContra"];
 
 	$conexion = new mysqli(SERVIDOR,USUARIO,CONTRA,BASEDATOS);
-	$sql="select idRol and idUsuario from usuario where nombUsuario = '$usuario' and pass='$contra'";
+	$sql="select idRol from usuario where nombUsuario = '$usuario' and pass='$contra'";
 	$resultado = $conexion->query($sql);
 	$cantidad = mysqli_num_rows($resultado);	
 		if ($cantidad==0) {
