@@ -8,7 +8,7 @@ $nuevoUsuario = new NuevoUsuario();
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Nuevo Usuario</title>
+	<title>Gestión Usuario</title>
 	<meta name="viewpot" content="width=device-width,Initial-escale=1,Maximun-scale=1">
 	<script src="../plugins/js/jquery.js"></script>        
 	<script src="../plugins/js/sweetalert2.all.min.js"></script>
@@ -67,7 +67,7 @@ $nuevoUsuario = new NuevoUsuario();
 					<a class="nav-link" href="#">Usuarios</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Graficos</a>
+					<a class="nav-link" href="frmGraficos.php">Graficos</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Buscar Ticket</a>
@@ -78,7 +78,7 @@ $nuevoUsuario = new NuevoUsuario();
 	<!--FIN NAV-->
 	<section>
 		<div class="container alert alert-info" role="alert">
-			<center><h1><b>Agregar Usuario</b></h1></center>
+			<center><h1><b>Gestión Usuarios</b></h1></center>
 		</div>
 		<div class="container jumbotron col-md-10">
 			<div class="row">

@@ -26,7 +26,7 @@ session_start();
 						<?php 
 						if (isset($_SESSION["usuario"])) {
 							print "Bienvenido ".$_SESSION["usuario"]["nombUsuario"].
-                                           "<br>";
+                                            "(".$_SESSION["usuario"]["rol"].").<br>";
                             print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";	
                             if ($_SESSION["usuario"]["rol"]==3) {
                             	?>
@@ -77,7 +77,7 @@ session_start();
 						<p class="card-tetx" align="center">
 							Genere gráficas para conocer la tendencia de los reportes realizados por los usuarios.
 						</p>
-						<a href="" class="btn btn-secondary" align="">Generar Gráficas</a>
+						<a href="frmGraficos.php" class="btn btn-secondary" align="">Generar Gráficas</a>
 					</div>
 				</div>	
 				<div class="card">

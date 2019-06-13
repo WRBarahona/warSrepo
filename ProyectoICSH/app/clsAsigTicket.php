@@ -27,7 +27,7 @@
 
 
 		public function insertar() {
-        	$sql="INSERT INTO asignacion VALUES('$this->idTecnico','$this->idTicket');";
+        	$sql="INSERT INTO asignacion VALUES('$this->idTicket','$this->idTecnico');";
        		$this->c->consultar($sql);
     	}
 
@@ -42,7 +42,7 @@
 		}
 
 		public function verAsignados() {
-        $sql="SELECT * FROM asignacion ";
+        $sql="SELECT * FROM asignacion";
         $resultado= $this->c->consultar($sql);
         $ncampos= mysqli_num_fields($resultado);
         $tabla="<table class='table table-bordered'>";

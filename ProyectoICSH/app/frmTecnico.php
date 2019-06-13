@@ -92,7 +92,7 @@ $tecnico=new Tecnico();
 					<a class="nav-link" href="frmNuevoUsuario.php">Usuarios</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Graficos</a>
+					<a class="nav-link" href="frmGraficos.php">Graficos</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Buscar Ticket</a>

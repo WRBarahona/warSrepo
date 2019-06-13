@@ -60,7 +60,7 @@ $asignarTicket = new asignarTicket();
 					<a class="nav-link" href="frmNuevoUsuario.php">Usuarios</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Graficos</a>
+					<a class="nav-link" href="frmGraficos.php">Graficos</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Buscar Ticket</a>
@@ -122,10 +122,23 @@ $asignarTicket = new asignarTicket();
 				</div>
 			</div>
 			<div>
-				<?php  
-					print $asignarTicket->verAsignados();
-				?>
 			</div>
+
+			<?php 
+				if (isset($_REQUEST['hdnGuardar'])) {
+					$asignarTicket->setIdTecnico($_REQUEST['selTecnico']);
+					$asignarTicket->setIdTicket($_REQUEST['selTicket']);
+					$asignarTicket->insertar($_REQUEST['selTicket']);
+					$asignarTicket->actActividadTec($_REQUEST['selTecnico']);
+					$asignarTicket->actAsignacionTic($_REQUEST['selTicket']);
+					print $asignarTicket->verAsignados();
+				}
+				else{
+					print $asignarTicket->verAsignados();
+				}
+
+
+			 ?>
 		</div>
 	</section>
 
@@ -150,19 +163,6 @@ $asignarTicket = new asignarTicket();
 	
 
 </body>
-
-<?php 
-
-	if (isset($_REQUEST['hdnGuardar'])) {
-		$asignarTicket->setIdTecnico($_REQUEST['selTecnico']);
-		$asignarTicket->setIdTicket($_REQUEST['selTicket']);
-		$asignarTicket->insertar(($_REQUEST['selTicket']));
-		$asignarTicket->actActividadTec($_REQUEST['selTecnico']);
-		$asignarTicket->actAsignacionTic($_REQUEST['selTicket']);
-	}
-
-
- ?>
 
 
  <script type="text/javascript">
