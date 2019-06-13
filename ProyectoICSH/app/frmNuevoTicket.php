@@ -114,9 +114,7 @@ include 'enviar.php';
 										<a href="reportes/pdfTicketCliente.php" target="_blank">
 											<input type="button" name="btnImprimir" class="btn btn-dark" id="btnImprimir" value="Imprimir Ticket">
 										</a>
-										<input type="button" id="btnBloquearBoton" name="Bloquear Boton Imprimir" onclick="$('#btnImprimir').attr('disabled', true)">
-										<input type="button" id="btnDesbloquearBoton" name="Desbloquear Boton Imprimir" onclick="$('#btnImprimir').attr('disabled', false)">															
-									</center>
+                                                                        </center>
 								</div>								
 							</div>
 						</div>

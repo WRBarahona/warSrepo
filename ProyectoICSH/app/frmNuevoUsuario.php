@@ -1,5 +1,6 @@
 <?php 
 session_start();
+
 include('clsNUsuario.php');
 $nuevoUsuario = new NuevoUsuario();
 

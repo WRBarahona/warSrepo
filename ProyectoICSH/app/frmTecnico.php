@@ -1,4 +1,5 @@
 <?php 
+
 session_start();
 require('clsTecnico.php');
 $tecnico=new Tecnico();

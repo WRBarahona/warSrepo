@@ -1,4 +1,4 @@
-<?php 
+<?php  
 	include ('conexion.php');
 	class NuevoUsuario{
 		protected $c;
