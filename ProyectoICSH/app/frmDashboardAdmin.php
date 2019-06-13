@@ -65,7 +65,7 @@ session_start();
 						<p class="card-tetx" align="center">
 							Realice una asignación de ticket a un técnico para su debida solución.
 						</p>
-						<a href="nuevoTicket.php" class="btn btn-secondary" align="">Asignar ticket</a>
+						<a href="frmAsigTicket.php" class="btn btn-secondary" align="">Asignar ticket</a>
 					</div>
 				</div>	
 				<div class="card">
@@ -78,6 +78,18 @@ session_start();
 							Genere gráficas para conocer la tendencia de los reportes realizados por los usuarios.
 						</p>
 						<a href="" class="btn btn-secondary" align="">Generar Gráficas</a>
+					</div>
+				</div>	
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title" align="center">TECNICOS</h4>
+					</div><br>
+					<img  class="rounded mx-auto d-block" class="card-img-top"  src="../img/tecnico.png"><br>
+					<div class="card-body" align="center" style="background-color: #ECEFF1">							
+						<p class="card-tetx" align="center">
+							Ingrese, busque, vea y modifique información de los tecnicos.
+						</p>
+						<a href="frmTecnico.php" class="btn btn-secondary" align="">Administrar Tecnicos</a>
 					</div>
 				</div>
 				<div class="card">
@@ -101,10 +113,21 @@ session_start();
 							<p class="card-tetx" align="center">
 								Ingrese, busque, vea y modifique información de los usuarios.
 							</p>
-							<a href="" class="btn btn-secondary" align="">Administrar Usuarios</a>
+							<a href="frmNuevoUsuario.php" class="btn btn-secondary" align="">Administrar Usuarios</a>
 						</div>
 					</div>
-							
+					<div class="card">
+						<div class="card-header">
+							<h4 class="card-title" align="center">LOGOUT</h4>
+						</div> 					 					
+						<div class="card-footer"  style="text-align: center;">
+								<?php 
+									if (isset($_SESSION["usuario"])) {							
+		                            print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";	
+									}
+								?>
+						</div>				 
+					</div>				
 				</div>
 			</div>
 		</section>
