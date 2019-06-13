@@ -1,5 +1,6 @@
 <?php
 include 'credenciales.php';
+//COMENTARIO HECHO POR URRUTIA :)
 class Conexion{
     protected $conn;
     public function conexion() {
