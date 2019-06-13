@@ -1,16 +1,20 @@
 <?php 
 session_start();
+include 'clsTicket.php';
+include 'enviar.php';
+
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Nuevo Ticket</title>
+	<title>Crear un nuevo Ticket</title>
 	<meta name="viewpot" content="width=device-width,Initial-escale=1,Maximun-scale=1">
 	<script src="../plugins/js/jquery.js"></script>        
 	<script src="../plugins/js/sweetalert2.all.min.js"></script>
 	<link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" href="../plugins/css/estilosDashboard.css">
+	 <script type="text/javascript" src="../plugins/js/validacionNumerica.js"></script>
 </head>
 <body background="../img/fondo2.jpg">
 	<header id="cabecera">
@@ -22,8 +26,7 @@ session_start();
 				<div class="col-xs-4 col-md-4" style="margin-top: 30px;">
 					<?php 
 						if (isset($_SESSION["usuario"])) {
-							print "Bienvenido ".$_SESSION["usuario"]["nombUsuario"].
-                                            "(".$_SESSION["usuario"]["rol"].").<br>";
+							print "Bienvenido/a ".$_SESSION["usuario"]["nombUsuario"]."<br>";
                             print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";	
                            }
 							else{
@@ -46,10 +49,10 @@ session_start();
 					<a class="nav-link" href="frmDashboardCliente.php">INICIO</a>
 				</li>
  				<li class="nav-item">
-					<a class="nav-link" href="frmNuevoTicket.php">Nuevo ticket</a>
+					<a class="nav-link" href="frmNuevoTicket.php">Nuevo Ticket</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#"> </a>
+					<a class="nav-link" href="frmListarTicketCliente.php">Mis Tickets </a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#"></a>
@@ -59,49 +62,62 @@ session_start();
 	</nav>
 	<!--FIN NAV-->
 	<section>
-		<div class="container alert alert-info" role="alert">
-			<center><h1><b>Gestión de ticket</b></h1></center>
+		<div class="container alert alert-info" role="alert" style="margin-top: 15px;">
+			<center><h1><b>Nuevo  Ticket</b></h1></center>
 		</div>
-		<div id="d1" class="container jumbotron">
+		<div  class="container jumbotron" style="width: 75%;">
 			<div class="row">
 				<div class="col-md-12 col-lg-12 col-sm-12">
-					<form method="POST" action="nuevoTicket.php">
+					<form method="POST" action="#" name="frmTicket" id="miform">
+						<div id="d1"></div>
 						<!--inicio de formulario-->
 						<div class="container">
 							<div class="row">
 								<div class="col-md-6 col-lg-6 col-sm-12">
-									<b><label class="control-label">No Carnet</label></b>
-									<input class="form-control" type="text" name="" required="" placeholder="--Digite su No de Carnet--" pattern="" max="" min="" title="" autofocus="true"><br>
-
-									<b><label class="control-label">Departamento</label></b>
-									<select class="form-control">
-										<option value="">--Seleccione un departamento--</option>
-										<option value="informatica">Sistemas</option>
-										<option value="otro">Otros</option>
+									<b><label class="control-label">No Carnet</label></b>				
+										<?php 
+											 $tic = new Ticket();
+											 $tic->mostrarCarnet();
+										 ?>
+									<br>	
+									<b><label class="control-label">Seleccione su departamento</label></b>
+									<select id="txtDepartamento" name="txtDepartamento" class="form-control">
+										<option value=""></option>
+										<option value="Sistemas">RRHH</option>
+										<option value="Redes">Contaduría</option>
+										<option value="Mantenimiento">Compras y suministros</option>
+										<option value="Otros">Otros</option>
 									</select>
 									<br>
 
 									<b><label class="control-label">Ingrese su Nombre</label></b>
-									<input class="form-control" type="text" name="" required="" placeholder="--Nombre--" pattern="" max="" min="" title=""><br>
+									<input class="form-control" name="txtNombre" type="text" id="txtNombre">
+									<br>
 
 									<b><label class="control-label">Teléfono / Celular</label></b>
-									<input class="form-control" type="text" name="" required="" placeholder="0000-0000" pattern="" title=""><br>
-								</div>
-								<div class="col-md-6 col-lg-6 col-sm-12">
-									<b><label class="control-label">Fecha de reporte</label></b>
-									<input class="form-control" type="date" required=""><br>
-
-									<b><label class="control-label">Descripción del problema</label></b>
-									<textarea class="form-control" rows="5" placeholder="--Describa el problema en el equipo--" name="" required="" minlength=""></textarea>
+									<input class="form-control" type="text" id="txtTelefono"  name="txtTelefono"  placeholder="0000-0000" pattern="[0-9]{4}-[0-9]{4}" onkeypress="return soloNumeros(event)">
 									<br>
 								</div>
-								<br>
-								<div class="container-fluid">
-									<center>
-										<input class="btn btn-primary" type="submit" name="btnAgregar" value="Agregar">
-										<a href="dashboardAdmin.php" class="btn btn-danger ">Cancelar</a>
-									</center>
+
+								<div class="col-md-6 col-lg-6 col-sm-12">
+									<b><label class="control-label">Fecha de reporte</label></b>
+									<input class="form-control" name="txtFecha" id="txtFecha" type="date" min="2019-01-01"><br>
+
+									<b><label class="control-label">Descripción del problema</label></b>
+									<textarea class="form-control" name="txtDescripcion" id="txtDescripcion"rows="5" placeholder="--Describa el problema del equipo--"></textarea>
 								</div>
+								<br>
+
+								<div class="container-fluid">
+									<center>								
+										<input type="button" class="btn btn-outline-info" value="Enviar y Guardar Ticket" id="btnGuardarTicket" >	
+										<a href="reportes/pdfTicketCliente.php" target="_blank">
+											<input type="button" name="btnImprimir" class="btn btn-dark" id="btnImprimir" value="Imprimir Ticket">
+										</a>
+										<input type="button" id="btnBloquearBoton" name="Bloquear Boton Imprimir" onclick="$('#btnImprimir').attr('disabled', true)">
+										<input type="button" id="btnDesbloquearBoton" name="Desbloquear Boton Imprimir" onclick="$('#btnImprimir').attr('disabled', false)">															
+									</center>
+								</div>								
 							</div>
 						</div>
 					</form>
@@ -110,8 +126,13 @@ session_start();
 			</div>
 		</div>
 	</section>
-
-
+	<?php 
+		$tic = new Ticket();
+		if (isset($_REQUEST["hdnIngresar"])) {
+			$tic->agregar($_REQUEST['txtCarnet'],$_REQUEST['txtFecha'],$_REQUEST['txtDescripcion']);
+			llenarCorreo($_REQUEST['txtDepartamento'],$_REQUEST['txtNombre'], $_REQUEST['txtTelefono'],$_REQUEST['txtFecha'],$_REQUEST['txtDescripcion']);
+		}
+	 ?>
 	<footer id="pie">
 		<div class="container-fluid">
 			<div class="row">
@@ -129,7 +150,45 @@ session_start();
 			</div>	
 		</div>			
 	</footer>
-	
-
 </body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#btnGuardarTicket').click(function(){
+			id = $('#txtCarnet').val();	
+			depto = $('#txtDepartamento').val();
+			nombre = $('#txtNombre').val();
+			tel = $('#txtTelefono').val();
+			fecha = $('#txtTelefono').val();
+			descrip = $('#txtDescripcion').val();			
+			$("#d1").prepend("<input type='hidden' name='hdnIngresar' value='1'>");
+			if (id=="" || depto=="" || nombre=="" || tel=="" || fecha=="" || descrip=="") {
+				Swal.fire({
+				  type: 'error',
+				  title: 'Oops...',
+				  text: '¡Llene todos los campos para enviar el ticket!',		  				   		 	
+				});				 
+			}
+			else{
+				Swal.fire({
+					type:'question',
+					title: 'Confimación de envío de ticket',
+					text: '¿Está seguro de enviar este ticket?',
+					showCancelButton:true,
+                    cancelButtonColor:"red",
+                    confirmButtonColor:"green",
+                    cancelButtonText:"Cancelar",
+                    confirmButtonText:"¡Sí, enviar!",
+                    customClass: "swal_alert",
+				}).then((result)=>{
+					if (result.value) {
+						$("#miform").submit();			
+					}	
+							
+				})				
+			}		
+		});
+
+		
+	});
+</script>
 </html>

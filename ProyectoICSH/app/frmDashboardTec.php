@@ -27,7 +27,7 @@ session_start();
 					<?php 
 						if (isset($_SESSION["usuario"])) {
 							print "Bienvenido ".$_SESSION["usuario"]["nombUsuario"].
-                                            "(".$_SESSION["usuario"]["rol"].").<br>";
+                                           "<br>";
                             print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";	
                             if ($_SESSION["usuario"]["rol"]==2) {
                             	?>
@@ -60,7 +60,7 @@ session_start();
 						<p class="card-tetx" align="center">
 							Actualice el estado del ticket solucionado.
 						</p>
-						<a href="cierreTicket.php" class="btn btn-secondary" align="">Cerrar Ticket</a>
+						<a href="" class="btn btn-secondary" align="">Cerrar Ticket</a>
 					</div>
 				</div>
 				<div class="card">
@@ -75,18 +75,7 @@ session_start();
 						<a href="" class="btn btn-secondary" align="">Ver Mis Tickets</a>
 					</div>
 				</div>
-				<div class="card">
-					<div class="card-header">
-						<h4 class="card-title" align="center">LOGOUT</h4>
-					</div> 					 					
-					<div class="card-footer"  style="text-align: center;">
-							<?php 
-								if (isset($_SESSION["usuario"])) {							
-	                            print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";	
-								}
-							?>
-					</div>				 
-				</div>				
+						
 			</div>
 
 

@@ -27,7 +27,7 @@ if (isset($_REQUEST["btnIngresar"])) {
 	$contra = $_REQUEST["txtContra"];
 
 	$conexion = new mysqli(SERVIDOR,USUARIO,CONTRA,BASEDATOS);
-	$sql="select idRol from usuario where nombUsuario = '$usuario' and pass='$contra'";
+	$sql="select idRol and idUsuario from usuario where nombUsuario = '$usuario' and pass='$contra'";
 	$resultado = $conexion->query($sql);
 	$cantidad = mysqli_num_rows($resultado);	
 		if ($cantidad==0) {
@@ -51,18 +51,26 @@ if (isset($_REQUEST["btnIngresar"])) {
 		}
 		else{
 			$fila=$resultado->fetch_array(MYSQLI_NUM);
-			$rol=$fila["0"];
+			$rol=$fila["0"];			
+			//----------------
+			$sql2="select idUsuario from usuario where nombUsuario = '$usuario' and pass='$contra'";
+			$result = $conexion->query($sql2);
+			$fila2=	$result->fetch_array(MYSQLI_NUM);
+			$id = $fila2["0"];		
 			if ($rol=="1") {
 				$_SESSION["usuario"]["nombUsuario"]=$usuario;
-				$_SESSION["usuario"]["rol"]=$rol;
+				$_SESSION["usuario"]["rol"]=$rol;	
+				$_SESSION["usuario"]["idUsuario"]=$id;			
 				header("Location:frmDashboardCliente.php");
 			}	elseif ($rol=="2") {
 				$_SESSION["usuario"]["nombUsuario"]=$usuario;
 				$_SESSION["usuario"]["rol"]=$rol;
+				$_SESSION["usuario"]["idUsuario"]=$id;
 				header("Location:frmDashboardTec.php");
 			}	elseif ($rol=="3") {
 				$_SESSION["usuario"]["nombUsuario"]=$usuario;
 				$_SESSION["usuario"]["rol"]=$rol;
+				$_SESSION["usuario"]["idUsuario"]=$id;
 				header("Location:frmDashboardAdmin.php");
 			}	else{
 				header("Location:../index.php");

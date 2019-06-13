@@ -1,5 +1,6 @@
 <?php 
 session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -26,9 +27,8 @@ session_start();
 				<div class="col-xs-4 col-md-4" style="margin-top: 30px;">
 					<?php 
 						if (isset($_SESSION["usuario"])) {
-							print "Bienvenido ".$_SESSION["usuario"]["nombUsuario"].
-                                            "(".$_SESSION["usuario"]["rol"].").<br>";
-                            print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";	
+							print "Bienvenido ".$_SESSION["usuario"]["nombUsuario"]. "<br>";				 
+                            print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";	                            
                             if ($_SESSION["usuario"]["rol"]==1) {
                             	?>
                             	 <script type="text/javascript">
@@ -56,41 +56,26 @@ session_start();
 						<h4 class="card-title" align="center">NUEVO TICKET</h4>
 					</div><br>
 					<img  class="rounded mx-auto d-block" class="card-img-top"  src="../img/nuevoReporte.png"><br>
-					<div class="card-body" align="center" style="background-color: #ECEFF1">							
+					<div class="card-body" align="center" style="background-color: #ECEFF1">				
 						<p class="card-tetx" align="center">
-							Realice un nuevo ticket de equipo defectuoso o dañado.
+							Realice y envíe un nuevo ticket para reportar equipo defectuoso o dañado.
 						</p>
 						<a href="frmNuevoTicket.php" class="btn btn-secondary" align="">Crear Nuevo Ticket</a>
 					</div>
 				</div>
 				<div class="card">
 					<div class="card-header">
-						<h4 class="card-title" align="center">MIS TICKETS</h4>
+						<h4 class="card-title" align="center">BUSQUEDA DE TICKETS</h4>
 					</div><br>
 					<img  class="rounded mx-auto d-block" class="card-img-top"  src="../img/verReporte.png"><br>
-					<div class="card-body" align="center" style="background-color: #ECEFF1">							
+					<div class="card-body" align="center" style="background-color: #ECEFF1">				
 						<p class="card-tetx" align="center">
-							Busque y consulte sus anteriores tickets.
+							Busque y consulte sus anteriores tickets. Verifique que se haya atendido su problema.
 						</p>
-						<a href="" class="btn btn-secondary" align="">Ver Mis Tickets</a>
+						<a href="frmListarTicketCliente.php" class="btn btn-secondary" align="">Ver Mis Tickets</a>
 					</div>
-				</div>
-				<div class="card">
-					<div class="card-header">
-						<h4 class="card-title" align="center">LOGOUT</h4>
-					</div> 					 					
-					<div class="card-footer"  style="text-align: center;">
-							<?php 
-								if (isset($_SESSION["usuario"])) {							
-	                            print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";	
-								}
-							?>
-					</div>				 
-				</div>				
+				</di>			
 			</div>
-
-
-
 		</div>
 	</section>
 

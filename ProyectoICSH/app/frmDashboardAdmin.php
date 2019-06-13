@@ -26,7 +26,7 @@ session_start();
 						<?php 
 						if (isset($_SESSION["usuario"])) {
 							print "Bienvenido ".$_SESSION["usuario"]["nombUsuario"].
-                                            "(".$_SESSION["usuario"]["rol"].").<br>";
+                                           "<br>";
                             print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";	
                             if ($_SESSION["usuario"]["rol"]==3) {
                             	?>
@@ -104,18 +104,7 @@ session_start();
 							<a href="" class="btn btn-secondary" align="">Administrar Usuarios</a>
 						</div>
 					</div>
-					<div class="card">
-						<div class="card-header">
-							<h4 class="card-title" align="center">LOGOUT</h4>
-						</div> 					 					
-						<div class="card-footer"  style="text-align: center;">
-								<?php 
-									if (isset($_SESSION["usuario"])) {							
-		                            print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";	
-									}
-								?>
-						</div>				 
-					</div>				
+							
 				</div>
 			</div>
 		</section>
