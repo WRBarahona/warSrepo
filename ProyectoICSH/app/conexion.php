@@ -4,6 +4,7 @@ class Conexion{
     protected $conn;
     public function conexion() {
         $this->conn=new mysqli(SERVIDOR,USUARIO,CONTRA,BASEDATOS);
+        $this->conn->set_charset("utf8");
     }
     public function deconectar() {
         $this->conn->close();

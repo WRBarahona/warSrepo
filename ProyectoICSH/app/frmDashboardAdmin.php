@@ -75,6 +75,7 @@ session_start();
 				<div class="card">
 					<div class="card-header">
 						<h4 class="card-title" align="center">CREAR GRÁFICOS</h4>
+						<br>
 					</div><br>
 					<img  class="rounded mx-auto d-block" class="card-img-top"  src="../img/AdmGraficas.png"><br>
 					<div class="card-body" align="center" style="background-color: #ECEFF1">							
@@ -98,14 +99,14 @@ session_start();
 				</div>
 				<div class="card">
 					<div class="card-header">
-						<h4 class="card-title" align="center">BUSCAR TICKETS</h4>
+						<h4 class="card-title" align="center">VISTA GENERAL DE TICKETS RESUELTOS</h4>
 					</div><br>
 					<img  class="rounded mx-auto d-block" class="card-img-top"  src="../img/RptAdmin.png"><br>
 					<div class="card-body" align="center" style="background-color: #ECEFF1">							
 						<p class="card-tetx" align="center">
-							Busque, filtre, vea y consulte los actuales y anteriores tickets.
+							Vea y consulte los actuales y anteriores tickets.
 						</p>
-						<a href="" class="btn btn-secondary" align="">Buscar Ticket</a>
+						<a href="frmVistaSoluciones.php" class="btn btn-secondary" align="">Buscar Ticket</a>
 					</div>
 				</div>
 				<div class="card">
@@ -115,23 +116,35 @@ session_start();
 						<img  class="rounded mx-auto d-block" class="card-img-top"  src="../img/ussers.png"><br>
 						<div class="card-body" align="center" style="background-color: #ECEFF1">							
 							<p class="card-tetx" align="center">
-								Ingrese, busque, vea y modifique información de los usuarios.
+								Vea y consulte los tickets resueltos hasta la fecha.
 							</p>
 							<a href="frmNuevoUsuario.php" class="btn btn-secondary" align="">Administrar Usuarios</a>
 						</div>
+				</div>
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title" align="center">VISTA GENERAL DE TICKETS PENDIENTES</h4>
+					</div><br>
+					<img  class="rounded mx-auto d-block" class="card-img-top"  src="../img/RptAdmin.png"><br>
+					<div class="card-body" align="center" style="background-color: #ECEFF1">							
+						<p class="card-tetx" align="center">
+							Vea y consulte todos los tickets aun sin resolver.
+						</p>
+						<a href="frmVistaTickClientes.php" class="btn btn-secondary" align="">Buscar Ticket</a>
 					</div>
-					<div class="card">
+				</div>
+					<!--<div class="card">
 						<div class="card-header">
 							<h4 class="card-title" align="center">LOGOUT</h4>
 						</div> 					 					
 						<div class="card-footer"  style="text-align: center;">
 								<?php 
-									if (isset($_SESSION["usuario"])) {							
-		                            print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";	
-									}
+									/*if (isset($_SESSION["usuario"])) {							
+		                            print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";
+									}*/
 								?>
 						</div>				 
-					</div>				
+					</div>-->
 				</div>
 			</div>
 		</section>
