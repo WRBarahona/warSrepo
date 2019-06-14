@@ -8,6 +8,7 @@ session_start();
 <head>
 	<meta charset="UTF-8">
 	<title>Usuario - Creación y vista de tickets</title>
+	<link rel="icon" href="../img/icono.png">
 	<meta name="viewpot" content="width=device-width,Initial-escale=1,Maximun-scale=1">
 	<script src="../plugins/js/jquery.js"></script>        
 	<script src="../plugins/js/sweetalert2.all.min.js"></script>

@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Login Principal</title>
+	<link rel="icon" href="img/icono.png">
 	<meta name="viewpot" content="width=device-width,Initial-escale=1,Maximun-scale=1">
     <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.css">
     <script type="text/javascript" src="plugins/bootstrap/js/bootstrap.js"></script>

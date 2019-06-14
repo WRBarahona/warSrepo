@@ -7,6 +7,7 @@ session_start();
 <head>
 	<meta charset="UTF-8">
 	<title>Técnico - Resolución de tickets y vista</title>
+	<link rel="icon" href="../img/icono.png">
 	<meta name="viewpot" content="width=device-width,Initial-escale=1,Maximun-scale=1">
 	<script src="../plugins/js/jquery.js"></script>        
 	<script src="../plugins/js/sweetalert2.all.min.js"></script>
@@ -30,7 +31,7 @@ session_start();
                                            "<br>";
                             print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-sm'>Cerrar sesión</button></a><br>";
                             $idUsuario =  $_SESSION["usuario"]["idUsuario"];
-                            echo $idUsuario;
+                            
                             if ($_SESSION["usuario"]["rol"]==2) {
                             	?>
                             	 <script type="text/javascript">
@@ -51,7 +52,7 @@ session_start();
 	</header>
 	
 	<section>
-		<div class="container">
+		<div class="container" style="margin: auto;">
 			<div class="card-columns" id="cartas">
 				<div class="card">
 					<div class="card-header">
@@ -74,7 +75,7 @@ session_start();
 						<p class="card-tetx" align="center">
 							Busque y consulte sus anteriores tickets.
 						</p>
-						<a href="" class="btn btn-secondary" align="">Ver Mis Tickets</a>
+						<a href="frmListarTicketsTecnico.php" class="btn btn-secondary" align="">Ver Mis Tickets</a>
 					</div>
 				</div>
 						
