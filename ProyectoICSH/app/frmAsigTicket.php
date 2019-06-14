@@ -27,11 +27,16 @@ $asignarTicket = new asignarTicket();
 				<div class="col-xs-4 col-md-4" style="margin-top: 30px;">
 					<?php 
 						if (isset($_SESSION["usuario"])) {
-							print "Bienvenido ".$_SESSION["usuario"]["nombUsuario"].
-                                            "(".$_SESSION["usuario"]["rol"].").<br>";
-                            print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";	
-                           }
+							if ($_SESSION["usuario"]["rol"]=='3') {
+								print "Bienvenido ".$_SESSION["usuario"]["nombUsuario"].
+									"(".$_SESSION["usuario"]["rol"].").<br>";
+	                            print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";
+	                        }
 							else{
+								header("Location: acceso.php?cerrar=true");
+							}	
+                        }
+						else{
 							header("Location:../index.php");
 						}
 					 ?>

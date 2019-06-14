@@ -27,7 +27,7 @@
 
 
 		public function insertar() {
-        	$sql="INSERT INTO asignacion VALUES('$this->idTicket','$this->idTecnico');";
+        	$sql="INSERT INTO asignacion VALUES('$this->idTicket','$this->idTecnico', default);";
        		$this->c->consultar($sql);
     	}
 
@@ -55,9 +55,8 @@
         for($i=0;$i<$ncampos;$i++){
             while ($fila = mysqli_fetch_row($resultado)) {
                 $tabla.="<tr>";
-                    for($col=0;$col<$ncampos;$col++){
-                        $tabla.="<td>".$fila[$col]."</td>";
-                    }
+                $tabla.="<td>".$fila[0]."</td>";
+                $tabla.="<td>".$fila[1]."</td>";
                     
                 $tabla.="</tr>";            }         }
         $tabla.="</table>";
