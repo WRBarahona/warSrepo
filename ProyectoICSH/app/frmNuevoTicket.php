@@ -83,9 +83,9 @@ include 'enviar.php';
 									<b><label class="control-label">Seleccione su departamento</label></b>
 									<select id="txtDepartamento" name="txtDepartamento" class="form-control">
 										<option value=""></option>
-										<option value="Sistemas">RRHH</option>
-										<option value="Redes">Contaduría</option>
-										<option value="Mantenimiento">Compras y suministros</option>
+										<option value="RRHH">RRHH</option>
+										<option value="Contaduría">Contaduría</option>
+										<option value="Compras y suministros">Compras y suministros</option>
 										<option value="Otros">Otros</option>
 									</select>
 									<br>
