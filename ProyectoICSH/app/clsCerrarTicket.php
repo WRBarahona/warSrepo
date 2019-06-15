@@ -47,10 +47,10 @@ class solucionTicket{
 
 		//FUNCION PARA MOSTRAR EL ID DEL TICKET PARA SU SOLUCION
 		public function mostrarIdTicket($idUsuario){
-			$sql = "SELECT t1.idTicket FROM asignacion t1
-			INNER JOIN tecnico t2 ON t1.idTecnico = t2.idTecnico
-			INNER JOIN usuario t3 ON t2.idUsuario = t3.idUsuario
-			WHERE t1.estado = 1 and t2.disponible =  0 and t3.idusuario = '$idUsuario' ";
+			$sql = "SELECT t1.idTicket FROM asignacion as t1
+			INNER JOIN tecnico as t2 ON t1.idTecnico = t2.idTecnico
+			INNER JOIN usuario as t3 ON t2.idUsuario = t3.idUsuario
+			WHERE t1.estado = 1 and t2.disponible =  0 and t3.idusuario = $idUsuario";
 			$resultado = $this->s->consultar($sql);
 
 			echo '<select name="txtIDticket" id="txtIDticket" class="form-control">';

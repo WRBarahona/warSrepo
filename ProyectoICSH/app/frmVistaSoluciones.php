@@ -64,7 +64,7 @@ $vistaSoluciones = new VistaSoluciones();
 	  
 	<section class="container">
 		<br>
-		<h1 class="display-5" align="center">Vista de general de tickets solucionados</h1>
+		<h1 class="display-5" align="center">Vista general de tickets solucionados</h1>
 		<br>
 		<!--<h2 class="display-4" align="center" style="font-size: 35px;">Filtre los tickets según fecha</h2><br>
 		<hr width="1000">

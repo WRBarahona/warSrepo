@@ -81,7 +81,7 @@ $Solucion=new Solucion();
 	<!--FIN NAV-->
 	<section>
 		<div class="container alert alert-info" role="alert">
-			<center><h1><b>Reporte de fallas</b></h1></center>
+			<center><h1><b>Reporte de tickets solucionados</b></h1></center>
 		</div>
 		<div class="container jumbotron col-md-10">
 			<form action="#" method="POST" id="miform">
@@ -203,7 +203,7 @@ Highcharts.chart('container1', {
 						<div class="card-body" align="center" style="background-color: #ECEFF1">							
 							<p class="card-tetx" align="center">
 							</p>
-							<a href="frmNuevoUsuario.php" class="btn btn-secondary" align="">Volver</a>
+                                                        <a href="frmDashboardAdmin.php" class="btn btn-secondary" align="">Volver</a>
 						</div>
 					</div>
 			</div>

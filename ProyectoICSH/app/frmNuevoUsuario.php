@@ -64,7 +64,7 @@ $nuevoUsuario = new NuevoUsuario();
 					<a class="nav-link" href="frmDashboardAdmin.php">INICIO</a>
 				</li>
  				<li class="nav-item">
-					<a class="nav-link" href="frmAsignTicket.php">Asingnación Ticket</a>
+					<a class="nav-link" href="frmAsigTicket.php">Asingnación Ticket</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="frmTecnico.php">Tecnicos</a>

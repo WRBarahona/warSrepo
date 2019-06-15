@@ -136,7 +136,7 @@ include 'clsCerrarTicket.php';
 									<script type="text/javascript">
 										$(function).ready(function(){
 
-										})
+										});
 									</script>
 									<br>
 									<label  class="control-label"><b>Parte Solucionada según categoría</b></label>
@@ -153,7 +153,7 @@ include 'clsCerrarTicket.php';
 												<option value="Disco duro">Disco duro</option>
 												<option value="Tarjeta de sonido">Tarjeta de sonido</option>
 												<option value="Ventilador">Ventilador</option>
-												<option value="Fuente de porder">Fuente de porder</option>
+												<option value="Fuente de poder">Fuente de porder</option>
 												<option value="Batería">Batería</option>
 												<option value="otro">otro</option>
 											</select>

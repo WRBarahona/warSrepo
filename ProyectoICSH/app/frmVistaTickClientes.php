@@ -64,7 +64,7 @@ $vistaTickClientes = new VistaTickClientes();
 	  
 	<section class="container">
 		<br>
-		<h1 class="display-5" align="center">Vista de general de tickets pendientes</h1>
+		<h1 class="display-5" align="center">Vista general de tickets pendientes</h1>
 		<div class="row">
 			<div class="col-md-12 col-lg-12 col-sm-12">
 			<br>

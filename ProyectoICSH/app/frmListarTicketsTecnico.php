@@ -64,7 +64,7 @@ include 'clsCerrarTicket.php';
 		<?php 
 			$solu = new solucionTicket();
 			$idUsuario = $_SESSION["usuario"]["idUsuario"];
-		 	print utf8_encode($solu->mostrarTickets($idUsuario));				
+		 	print $solu->mostrarTickets($idUsuario);				
 		 ?>
 		 <br>
 		<hr>

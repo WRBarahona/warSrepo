@@ -29,6 +29,8 @@
 		public function insertar() {
         	$sql="INSERT INTO asignacion VALUES('$this->idTicket','$this->idTecnico', default);";
        		$this->c->consultar($sql);
+                $sqlEstado = "update asignacion set estado = 1 where idTicket = '$this->idTicket' and idTecnico = '$this->idTecnico'";
+                $this->c->consultar($sqlEstado);
     	}
 
     	public function actActividadTec() {
@@ -74,11 +76,11 @@
 		}
 
 		public function llenarTecnico(){
-			$sql="SELECT idTecnico, noCarnet FROM tecnico where estado=1 and disponible=1;";
+			$sql="SELECT idTecnico, nombre FROM tecnico where estado=1 and disponible=1;";
 			$result=$this->c->consultar($sql);
 			$option="";
 			while ($registro=mysqli_fetch_array($result)) {
-				$option.="<option value='".$registro['idTecnico']."'>".$registro['noCarnet']."</option>";
+				$option.="<option value='".$registro['idTecnico']."'>".$registro['nombre']."</option>";
 			}
 			echo $option;
 		}
