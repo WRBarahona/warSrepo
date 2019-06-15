@@ -49,6 +49,40 @@ $tecnico=new Tecnico();
         	password=pass;
         }
     </script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			<?php 
+			if (isset($_REQUEST["a"])) {?>
+				Swal.fire({
+					type: 'success',
+					title: '¡Bien hecho!',
+					text: '¡Técnico guardado exitosamente!',   
+					showConfirmButton: false,
+					timer: 2500             
+				});
+			<?php } ?>
+			<?php 
+			if (isset($_REQUEST["m"])) {?>
+				Swal.fire({
+					type: 'success',
+					title: '¡Bien hecho!',
+					text: '¡Técnico modificado exitosamente!',   
+					showConfirmButton: false,
+					timer: 2500             
+				});
+			<?php } ?>
+			<?php 
+			if (isset($_REQUEST["e"])) {?>
+				Swal.fire({
+					type: 'success',
+					title: '¡Bien hecho!',
+					text: '¡Técnico eliminado exitosamente!',   
+					showConfirmButton: false,
+					timer: 2500             
+				});
+			<?php } ?>
+		});
+	</script>
 </head>
 <body style="background-color: #bfbfbf;">
 	<header id="cabecera">
@@ -89,19 +123,22 @@ $tecnico=new Tecnico();
 					<a class="nav-link" href="frmDashboardAdmin.php">INICIO</a>
 				</li>
  				<li class="nav-item">
-					<a class="nav-link" href="frmAsigTicket.php">Asingnación Ticket</a>
+					<a class="nav-link" href="frmAsigTicket.php">Asignación Ticket</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Tecnicos</a>
+					<a class="nav-link" href="frmTecnico.php">Técnicos</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="frmNuevoUsuario.php">Usuarios</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="frmGraficos.php">Graficos</a>
+					<a class="nav-link" href="frmGraficos.php">Gráficos</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Buscar Ticket</a>
+					<a class="nav-link" href="frmVistaSoluciones.php">Vista tickets Solucionados</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="frmVistaTickClientes.php">Vista tickets pendientes</a>
 				</li>
 			</ul>
 		</div>
@@ -124,17 +161,17 @@ $tecnico=new Tecnico();
 						<div class="container">
 							<div class="row">
 								<div class="col-md-6 col-lg-6 col-sm-12">
-									<b><label class="control-label">Id de tecnico</label></b>
+									<b><label class="control-label">Id de técnico</label></b>
 									<input class="form-control" type="text" name="txtId" id="txtId" required="" placeholder="--Digite el N° de ID--" autofocus="true"><br>
 
 									<b><label class="control-label">No Carnet</label></b>
 									<input class="form-control" type="text" name="txtCarnet" id="txtCarnet" required="" placeholder="--Digite N° de Carnet--">
 								</div>
 								<div class="col-md-6 col-lg-6 col-sm-12">
-									<b><label class="control-label">Nombre del tecnico</label></b>
+									<b><label class="control-label">Nombre del técnico</label></b>
 									<input class="form-control" type="text" name="txtNombre" id="txtNombre" required="" placeholder="--Nombre--"><br>
 
-									<b><label class="control-label">Foto del tecnico</label></b><br>
+									<b><label class="control-label">Foto del técnico</label></b><br>
 									<input type="file" name="filFoto" id="filFoto">
 
 								</div>
@@ -146,12 +183,12 @@ $tecnico=new Tecnico();
 									<input class="form-control" type="text" name="txtTelefono" id="txtTelefono" placeholder="####-####" required  pattern="[0-9]{4}-[0-9]{4}"  minlength="9" maxlength="9"value="">
 								</div>
 								<div class="col-md-6 col-lg-6 col-sm-12">
-									<b><label class="control-label">Correo del tecnico</label></b>
+									<b><label class="control-label">Correo del técnico</label></b>
 									<input class="form-control" type="text" name="txtCorreo" id="txtCorreo" required="" placeholder="--Correo--">
 								</div>
 							</div>
 
-							<br><center><h4><b>Usuario de tecnico</b></h4></center>
+							<br><center><h4><b>Usuario de técnico</b></h4></center>
 
 							<div class="row">
 								<div class="col-md-6 col-lg-6 col-sm-12">
@@ -277,7 +314,7 @@ $tecnico=new Tecnico();
                 Swal.fire({
                     type:"warning",
                     title:"Error",
-                    text: "Debe completar todos los campos para poder Ingresar un nuevo tecnico",
+                    text: "Debe completar todos los campos para poder ingresar un nuevo tecnico",
                     confirmButtonText:"Confirmar",
                  });
             }else{
@@ -311,7 +348,7 @@ $tecnico=new Tecnico();
                 Swal.fire({
                     type:"warning",
                     title:"Error",
-                    text: "Debe seleccionar un tecnico",
+                    text: "Debe seleccionar un técnico",
                     confirmButtonText:"Confirmar",
                  });
             }
@@ -319,7 +356,7 @@ $tecnico=new Tecnico();
                 Swal.fire({
                 type:"warning",
                 title:"Error",
-                text: "No ha Modificado ningún campo",
+                text: "No ha modificado ningún campo",
                 confirmButtonText:"Confirmar",
                 });
             }
@@ -334,7 +371,7 @@ $tecnico=new Tecnico();
            		 }else{
 	                Swal.fire({
 	                        type:"warning",
-	                        title:"¿Está seguro que desea Modificar este Tecnico?",
+	                        title:"¿Está seguro que desea modificar este técnico?",
 	                        showCancelButton:true,
 	                        cancelButtonColor:"red",
 	                        confirmButtonColor:"green",
@@ -366,15 +403,15 @@ $tecnico=new Tecnico();
                 Swal.fire({
                     type:"warning",
                     title:"Error",
-                    text: "Debe seleccionar un tecnico",
+                    text: "Debe seleccionar un técnico",
                     confirmButtonText:"Confirmar",
                  });
             }
             else{
                 Swal.fire({
                         type:"warning",
-                        title:"¿Está seguro que desea Eliminar este tecnico?",
-                        text: "Una vez eliminado este tecnico no se podrá recuperar",
+                        title:"¿Está seguro que desea eliminar este técnico?",
+                        text: "Una vez eliminado este técnico no se podrá recuperar",
                         showCancelButton:true,
                         cancelButtonColor:"red",
                         confirmButtonColor:"green",
@@ -382,16 +419,8 @@ $tecnico=new Tecnico();
                         confirmButtonText:"Si, Eliminar.",
                         customClass: "swal_alert",
                     }).then((result)=>{
-                    if(result.value){
-                        Swal.fire({
-                        type:"success",
-                        title:"tecnico eliminado",
-                        confirmButtonText:"Confirmar",
-                        }).then((result)=>{
-                            if(result.value){
-                                $("#miform").submit();                          
-                            }
-                        });
+                    if(result.value){    
+                        $("#miform").submit();
                     }
                 });
             }

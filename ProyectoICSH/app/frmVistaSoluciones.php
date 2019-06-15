@@ -47,16 +47,25 @@ $vistaSoluciones = new VistaSoluciones();
 			<span class="navbar-text"></span>
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" href="frmDashboardAdmin.php">Inicio</a>
+					<a class="nav-link" href="frmDashboardAdmin.php">INICIO</a>
 				</li>
  				<li class="nav-item">
+					<a class="nav-link" href="frmAsigTicket.php">Asignación Ticket</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="frmTecnico.php">Técnicos</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="frmNuevoUsuario.php">Usuarios</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="frmGraficos.php">Gráficos</a>
+				</li>
+				<li class="nav-item">
 					<a class="nav-link" href="frmVistaSoluciones.php">Vista tickets Solucionados</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#"></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#"></a>
+					<a class="nav-link" href="frmVistaTickClientes.php">Vista tickets pendientes</a>
 				</li>
 			</ul>
 		</div>

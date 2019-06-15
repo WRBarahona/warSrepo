@@ -87,7 +87,7 @@ session_start();
 				</div>	
 				<div class="card">
 					<div class="card-header">
-						<h4 class="card-title" align="center">TECNICOS</h4>
+						<h4 class="card-title" align="center">TÉCNICOS</h4>
 					</div><br>
 					<img  class="rounded mx-auto d-block" class="card-img-top"  src="../img/tecnico.png"><br>
 					<div class="card-body" align="center" style="background-color: #ECEFF1">							

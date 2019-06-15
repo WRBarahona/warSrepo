@@ -78,7 +78,8 @@ class Tecnico{
     //Agregar datos
     public function insertar(){
         $sql="INSERT INTO tecnico values($this->id, '$this->carnet', '$this->nombre', '$this->correo', '$this->tel', '$this->foto', $this->idUsuario, default,default);";
-       $this->con->ejecutar($sql);      
+    	$this->con->ejecutar($sql);
+    	echo '<script>window.location="frmTecnico.php?a";</script>';
     }   
 
 	public function insertarUsuario($idUsuario,$nombUsuario,$pass,$idRol) {
@@ -88,7 +89,8 @@ class Tecnico{
     //Modificar datos
     public function modificar($id) {
         $sql="UPDATE tecnico set idTecnico=$this->id, noCarnet='$this->carnet', nombre='$this->nombre', Correo='$this->correo', tel='$this->tel', foto='$this->foto', idUsuario='$this->idUsuario' where idTecnico=$id";
-        $this->con->ejecutar($sql);     
+        $this->con->ejecutar($sql);
+    	echo '<script>window.location="frmTecnico.php?m";</script>';     
     } 
 
 	public function modificarUsuario($idUsuario,$nombUsuario,$pass, $id) {
@@ -100,6 +102,7 @@ class Tecnico{
     public function eliminar($id){
         $sql="UPDATE tecnico set estado=0 where idTecnico=$id";
         $this->con->ejecutar($sql);
+    	echo '<script>window.location="frmTecnico.php?e";</script>'; 
     }
     
     //Eliminar datos

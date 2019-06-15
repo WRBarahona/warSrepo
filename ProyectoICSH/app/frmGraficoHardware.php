@@ -51,33 +51,36 @@ $Solucion=new Solucion();
 		<!--INICIO NAV-->
 	
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
-	 <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
-		<span class="navbar-toggler-icon"></span>	
-	  </button>	
-		<div class="collapse navbar-collapse" id="collapse_target">
-			<span class="navbar-text"></span>
-			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link" href="frmDashboardAdmin.php">INICIO</a>
-				</li>
- 				<li class="nav-item">
-					<a class="nav-link" href="frmAsigTicket.php">Asingnación Ticket</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="frmTecnico.php">Tecnicos</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="frmNuevoUsuario.php">Usuarios</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="frmGraficos.php">Graficos</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Buscar Ticket</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
+     <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+        <span class="navbar-toggler-icon"></span>   
+      </button> 
+        <div class="collapse navbar-collapse" id="collapse_target">
+            <span class="navbar-text"></span>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="frmDashboardAdmin.php">INICIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="frmAsigTicket.php">Asignación Ticket</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="frmTecnico.php">Técnicos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="frmNuevoUsuario.php">Usuarios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="frmGraficos.php">Gráficos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="frmVistaSoluciones.php">Vista tickets Solucionados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="frmVistaTickClientes.php">Vista tickets pendientes</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 	<!--FIN NAV-->
 	<section>
 		<div class="container alert alert-info" role="alert">
@@ -251,12 +254,11 @@ Highcharts.chart('container1', {
 });
 		</script><br>
 		<div align="right">
-	        <a href="frmGraficos.php"><button class="btn btn-secondary btn-lg">Volver</button></a>
+                    <a href="frmDashboardAdmin.php"><button class="btn btn-secondary btn-lg">Volver</button></a>
 		</div>
 
 		</div>
 	</section>
-
 
 	<footer id="pie">
 		<div class="container-fluid">

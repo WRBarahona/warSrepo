@@ -16,6 +16,20 @@ $asignarTicket = new asignarTicket();
 	<script src="../plugins/js/sweetalert2.all.min.js"></script>
 	<link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" href="../plugins/css/estilosDashboard.css">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			<?php 
+			if (isset($_REQUEST["a"])) {?>
+				Swal.fire({
+					type: 'success',
+					title: '¡Bien hecho!',
+					text: '¡Ticket asignado exitosamente!',   
+					showConfirmButton: false,
+					timer: 2500             
+				});
+			<?php } ?>
+		});
+	</script>
 </head>
 <body background="../img/fondo2.jpg">
 	<header id="cabecera">
@@ -57,19 +71,22 @@ $asignarTicket = new asignarTicket();
 					<a class="nav-link" href="frmDashboardAdmin.php">INICIO</a>
 				</li>
  				<li class="nav-item">
-					<a class="nav-link" href="#">Asingnación Ticket</a>
+					<a class="nav-link" href="frmAsigTicket.php">Asignación Ticket</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="frmTecnico.php">Tecnicos</a>
+					<a class="nav-link" href="frmTecnico.php">Técnicos</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="frmNuevoUsuario.php">Usuarios</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="frmGraficos.php">Graficos</a>
+					<a class="nav-link" href="frmGraficos.php">Gráficos</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Buscar Ticket</a>
+					<a class="nav-link" href="frmVistaSoluciones.php">Vista tickets Solucionados</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="frmVistaTickClientes.php">Vista tickets pendientes</a>
 				</li>
 			</ul>
 		</div>

@@ -55,16 +55,22 @@
 		public function insertar() {
         	$sql="INSERT INTO usuario VALUES($this->idUsuario,'$this->nombUsuario', '$this->pass','$this->idRol',default);";
        		$this->c->consultar($sql);
+
+    	echo '<script>window.location="frmNuevoUsuario.php?a";</script>';
     	}
 
     	public function modificar($idUsuario){
 			$sql="UPDATE usuario SET idUsuario=$this->idUsuario, nombUsuario='$this->nombUsuario', pass='$this->pass', idRol='$this->idRol' WHERE idUsuario=$idUsuario;";
 			$this->c->ejecutar($sql);
+
+    	echo '<script>window.location="frmNuevoUsuario.php?m";</script>';
 		}
 
 		public function eliminar($idUsuario){
         $sql="UPDATE usuario set estado=0 where idUsuario=$idUsuario";
         $this->c->consultar($sql);
+
+    	echo '<script>window.location="frmNuevoUsuario.php?e";</script>';
    		}
 
    		public function mostrarUsuarios() {

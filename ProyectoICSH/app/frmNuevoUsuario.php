@@ -24,6 +24,40 @@ $nuevoUsuario = new NuevoUsuario();
 			$('#txtConfirmar').val(pass);
         }
 	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			<?php 
+			if (isset($_REQUEST["a"])) {?>
+				Swal.fire({
+					type: 'success',
+					title: '¡Bien hecho!',
+					text: '¡Usuario guardado exitosamente!',   
+					showConfirmButton: false,
+					timer: 2500             
+				});
+			<?php } ?>
+			<?php 
+			if (isset($_REQUEST["m"])) {?>
+				Swal.fire({
+					type: 'success',
+					title: '¡Bien hecho!',
+					text: '¡Usuario modificado exitosamente!',   
+					showConfirmButton: false,
+					timer: 2500             
+				});
+			<?php } ?>
+			<?php 
+			if (isset($_REQUEST["e"])) {?>
+				Swal.fire({
+					type: 'success',
+					title: '¡Bien hecho!',
+					text: '¡Usuario eliminado exitosamente!',   
+					showConfirmButton: false,
+					timer: 2500             
+				});
+			<?php } ?>
+		});
+	</script>
 </head>
 <body style="background-color: #bfbfbf;">
 	<header id="cabecera">
@@ -64,19 +98,22 @@ $nuevoUsuario = new NuevoUsuario();
 					<a class="nav-link" href="frmDashboardAdmin.php">INICIO</a>
 				</li>
  				<li class="nav-item">
-					<a class="nav-link" href="frmAsigTicket.php">Asingnación Ticket</a>
+					<a class="nav-link" href="frmAsigTicket.php">Asignación Ticket</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="frmTecnico.php">Tecnicos</a>
+					<a class="nav-link" href="frmTecnico.php">Técnicos</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Usuarios</a>
+					<a class="nav-link" href="frmNuevoUsuario.php">Usuarios</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="frmGraficos.php">Graficos</a>
+					<a class="nav-link" href="frmGraficos.php">Gráficos</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Buscar Ticket</a>
+					<a class="nav-link" href="frmVistaSoluciones.php">Vista tickets Solucionados</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="frmVistaTickClientes.php">Vista tickets pendientes</a>
 				</li>
 			</ul>
 		</div>
@@ -234,14 +271,14 @@ $nuevoUsuario = new NuevoUsuario();
                 Swal.fire({
                 type:"warning",
                 title:"Error",
-                text: "No ha Modificado ningún campo",
+                text: "No ha modificado ningún campo",
                 confirmButtonText:"Confirmar",
                 });
             }
             else{
                 Swal.fire({
                         type:"warning",
-                        title:"¿Está seguro que desea Modificar este usuario?",
+                        title:"¿Está seguro que desea modificar este usuario?",
                         showCancelButton:true,
                         cancelButtonColor:"red",
                         confirmButtonColor:"green",
@@ -275,7 +312,7 @@ $nuevoUsuario = new NuevoUsuario();
             else{
                 Swal.fire({
                         type:"warning",
-                        title:"¿Está seguro que desea aliminar este usuario?",
+                        title:"¿Está seguro que desea eliminar este usuario?",
                         text: "Una vez eliminado este usuario no se podrá recuperar",
                         showCancelButton:true,
                         cancelButtonColor:"red",
@@ -285,15 +322,7 @@ $nuevoUsuario = new NuevoUsuario();
                         customClass: "swal_alert",
                     }).then((result)=>{
                     if(result.value){
-                        Swal.fire({
-                        type:"success",
-                        title:"Usuario eliminado",
-                        confirmButtonText:"Confirmar",
-                        }).then((result)=>{
-                            if(result.value){
-                                $("#formNUsuario").submit();                          
-                            }
-                        });
+                    	$("#formNUsuario").submit();
                     }
                 });
             }

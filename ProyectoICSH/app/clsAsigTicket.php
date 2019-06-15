@@ -31,6 +31,7 @@
        		$this->c->consultar($sql);
                 $sqlEstado = "update asignacion set estado = 1 where idTicket = '$this->idTicket' and idTecnico = '$this->idTecnico'";
                 $this->c->consultar($sqlEstado);
+    		echo '<script>window.location="frmAsigTicket.php?a";</script>';
     	}
 
     	public function actActividadTec() {
@@ -39,7 +40,7 @@
 		}
 
 		public function actAsignacionTic() {
-			$sql="UPDATE ticket SET asignacion=1 WHERE idTicket ='$this->idTecnico'";
+			$sql="UPDATE ticket SET asignacion=1 WHERE idTicket ='$this->idTicket'";
 			$this->c->ejecutar($sql);
 		}
 
@@ -51,7 +52,7 @@
         //Imprimiendo los encabezados de la tabla
         $tabla.="<thead class='thead-dark'><tr>"; //<-INICIO DE FILA DE ENCABEZADO
         $tabla.="<th><b>ID Ticket</b></th>";  
-        $tabla.="<th><b>ID Tecnico</b></th>";   
+        $tabla.="<th><b>ID Técnico</b></th>";   
         $tabla.="</thead></tr>";//<-FIN DE FILA DE ENCABEZADO
         //IMPRIMIENDO EL CONTENIDO DE LA TABLA
         for($i=0;$i<$ncampos;$i++){
