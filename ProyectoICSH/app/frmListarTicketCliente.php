@@ -93,13 +93,13 @@ include 'clsTicket.php';
 		    
 			$idUsuario = $_SESSION["usuario"]["idUsuario"];          
 			if(isset($_REQUEST["hdnBuscar"])){
-				print utf8_decode($obj->mostrarTicketsFiltrados($idUsuario,$_REQUEST ["selectFiltro"]));
+				print $obj->mostrarTicketsFiltrados($idUsuario,$_REQUEST ["selectFiltro"]);
 			}
 			else if(isset($_REQUEST["btnLimpiar"])){
-				print utf8_decode( $obj->mostrarTickets($idUsuario)); 
+				print  $obj->mostrarTickets($idUsuario); 
 			}
 			else{
-				 print utf8_decode($obj->mostrarTickets($idUsuario)) ;
+				 print $obj->mostrarTickets($idUsuario) ;
 			}
 		
 		 ?>

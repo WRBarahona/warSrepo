@@ -15,6 +15,24 @@ include 'enviar.php';
 	<link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" href="../plugins/css/estilosDashboard.css">
 	 <script type="text/javascript" src="../plugins/js/validacionNumerica.js"></script>
+             <script type="text/javascript">
+             function soloNumeros(e){
+                    key = e.keyCode || e.which;
+                    tecla = String.fromCharCode(key).toLowerCase();
+                    numeros = "1234567890";
+                    especiales = [8, 45, 13];
+                         tecla_especial = false
+                         for(var i in especiales) {
+                             if(key == especiales[i]) {
+                                 tecla_especial = true;
+                                 break;
+                             }
+                         }
+                     if(numeros.indexOf(tecla)==-1  && !tecla_especial){
+                         return false;
+                     }
+              }
+             </script>
 </head>
 <body background="../img/fondo2.jpg">
 	<header id="cabecera">
@@ -95,7 +113,7 @@ include 'enviar.php';
 									<br>
 
 									<b><label class="control-label">Teléfono / Celular</label></b>
-									<input class="form-control" type="text" id="txtTelefono"  name="txtTelefono"  placeholder="0000-0000" pattern="[0-9]{4}-[0-9]{4}" onkeypress="return soloNumeros(event)">
+                                                                        <input class="form-control" type="text" id="txtTelefono"  name="txtTelefono"  placeholder="0000-0000" onkeypress="return soloNumeros(event)" maxlength="9" minlength="9">
 									<br>
 								</div>
 

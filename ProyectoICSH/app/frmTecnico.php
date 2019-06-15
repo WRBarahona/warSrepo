@@ -49,6 +49,24 @@ $tecnico=new Tecnico();
         	password=pass;
         }
     </script>
+       <script type="text/javascript">
+             function soloNumeros(e){
+                    key = e.keyCode || e.which;
+                    tecla = String.fromCharCode(key).toLowerCase();
+                    numeros = "1234567890";
+                    especiales = [8, 45, 13];
+                         tecla_especial = false
+                         for(var i in especiales) {
+                             if(key == especiales[i]) {
+                                 tecla_especial = true;
+                                 break;
+                             }
+                         }
+                     if(numeros.indexOf(tecla)==-1  && !tecla_especial){
+                         return false;
+                     }
+              }
+             </script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			<?php 
@@ -180,7 +198,7 @@ $tecnico=new Tecnico();
 							<div class="row">
 								<div class="col-md-6 col-lg-6 col-sm-12">
 									<b><label class="control-label">Teléfono / Celular</label></b>
-									<input class="form-control" type="text" name="txtTelefono" id="txtTelefono" placeholder="####-####" required  pattern="[0-9]{4}-[0-9]{4}"  minlength="9" maxlength="9"value="">
+                                                                        <input class="form-control" type="text" name="txtTelefono" id="txtTelefono" placeholder="####-####" required  onkeypress=" return soloNumeros(event)" minlength="9" maxlength="9"value="">
 								</div>
 								<div class="col-md-6 col-lg-6 col-sm-12">
 									<b><label class="control-label">Correo del técnico</label></b>

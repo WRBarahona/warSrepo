@@ -29,7 +29,7 @@ session_start();
 						if (isset($_SESSION["usuario"])) {
 							print "Bienvenido ".$_SESSION["usuario"]["nombUsuario"].
                                            "<br>";
-                            print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-sm'>Cerrar sesión</button></a><br>";
+                            print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";
                             $idUsuario =  $_SESSION["usuario"]["idUsuario"];
                             
                             if ($_SESSION["usuario"]["rol"]==2) {

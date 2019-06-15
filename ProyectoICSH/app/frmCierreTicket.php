@@ -28,6 +28,7 @@ include 'clsCerrarTicket.php';
 		});
 	</script>
 </script>
+
 </head>
 <body background="../img/fondo2.jpg">
 	<header id="cabecera">
@@ -89,6 +90,7 @@ include 'clsCerrarTicket.php';
 				<div class="col-md-12 col-lg-12 col-sm-12">
 					<form id="miform" method="POST" name="frmCierre" action="#">
 						<div id="d1"></div>
+						<div id="d2"></div>
 						<!--inicio de formulario-->
 						<div class="container">
 							<div class="row">
@@ -122,10 +124,10 @@ include 'clsCerrarTicket.php';
 									<b><label class="control-label">Categoría</label></b>
 									<br>
 									<div class="container">
-										<input class="form-check-input" value="Hardware" type="radio" name="txtCategoria" >Hardware</label>
+										<input class="form-check-input" value="Hardware" type="radio" name="txtCategoria" id="txtCategoriaH" >Hardware</label>
 										<br>
 
-										<input class="form-check-input" value="Software" type="radio" name="txtCategoria" >Software</label>
+										<input class="form-check-input" value="Software" type="radio" name="txtCategoria" id="txtCategoriaS" >Software</label>
 									</div>
 									<!-- parte del disabled :
 										onclick="$('#parteSoft').attr('disabled',false); $('#txtParteH').attr('disabled',true)"><label class="control-label"
@@ -141,9 +143,9 @@ include 'clsCerrarTicket.php';
 									<br>
 									<label  class="control-label"><b>Parte Solucionada según categoría</b></label>
 									<div class="row">
-										<div  id="" class="col-md-6 col-sm-6 col-lg-6">
+										<div  id="selectH" class="col-md-6 col-sm-6 col-lg-6">
 											Hardware
-											<select  id="txtParte" name="txtParte"  class="form-control" >
+											<select  id="txtParteH" name="txtParteH"  class="form-control" >
 												<option value=""></option>
 												<option value="CPU">CPU</option>
 												<option value="Memoria RAM">Memoria RAM</option>
@@ -153,14 +155,14 @@ include 'clsCerrarTicket.php';
 												<option value="Disco duro">Disco duro</option>
 												<option value="Tarjeta de sonido">Tarjeta de sonido</option>
 												<option value="Ventilador">Ventilador</option>
-												<option value="Fuente de poder">Fuente de porder</option>
-												<option value="Batería">Batería</option>
-												<option value="otro">otro</option>
+												<option value="Fuente de poder">Fuente de poder</option>
+												<option value="Bateria">Bateria</option>
+												<option value="Otro">otro</option>
 											</select>
 										</div>
 										<div class="col-md-6 col-sm-6 col-lg-6">
 											Software
-											<select  id="txtParte" name="txtParte" class="form-control" >
+											<select  id="txtParteS" name="txtParteS" class="form-control" >
 												<option value=""></option>
 												<option value="Windows">Windows</option>
 												<option value="Office">Office</option>
@@ -191,9 +193,12 @@ include 'clsCerrarTicket.php';
 	</section>
 	<?php 
 	$agre = new solucionTicket();
-	if (isset($_REQUEST["jsIngresar"])) {
-		$agre->agregarSolucion($_REQUEST["txtIDticket"],$_REQUEST["txtIDtecnico"],$_REQUEST["txtDate"],$_REQUEST["txtCategoria"],$_REQUEST["txtParte"],$_REQUEST["txtDescripcion"]);
+	if (isset($_REQUEST["jsIngresarH"])) {
+		$agre->agregarSolucion($_REQUEST["txtIDticket"],$_REQUEST["txtIDtecnico"],$_REQUEST["txtDate"],$_REQUEST["txtCategoria"],$_REQUEST["txtParteH"],$_REQUEST["txtDescripcion"]);
 		//@header("Location:frmDashboardTec.php");
+	}
+	if (isset($_REQUEST["jsIngresarS"])) {
+		$agre->agregarSolucion($_REQUEST["txtIDticket"],$_REQUEST["txtIDtecnico"],$_REQUEST["txtDate"],$_REQUEST["txtCategoria"],$_REQUEST["txtParteS"],$_REQUEST["txtDescripcion"]);
 	}
 	?>
 
@@ -222,13 +227,16 @@ include 'clsCerrarTicket.php';
 		$('#btnAgregar').click(function(){
 			idTicket = $('#txtIDticket').val();	
 			idTecnico = $('#txtIDtecnico').val();
-			fecha = $('#txtDate').val();
-			categoria = $('#txtCategoria').val();
-			parte = $('#txtParte').val();
-			comentario = $('#txtDescripcion').val();		
+			fecha = $('#txtDate').val();			
+			comentario = $('#txtDescripcion').val();
+			if ($("#miform input[id='txtCategoriaH']:radio").is(':checked')) {
+				$("#d1").prepend("<input type='hidden' name='jsIngresarH' value='1'>");
+			}
+			if ($("#miform input[id='txtCategoriaS']:radio").is(':checked')){
+				$("#d2").prepend("<input type='hidden' name='jsIngresarS' value='1'>");
+			}		
 
-			$("#d1").prepend("<input type='hidden' name='jsIngresar' value='1'>");
-			if (idTicket=="" || idTecnico=="" || fecha=="" || categoria=="" || comentario=="") {
+			if (idTicket=="" || idTecnico=="" || fecha=="" ||comentario=="") {
 				Swal.fire({
 					type: 'error',
 					title: 'Oops...',
@@ -238,7 +246,7 @@ include 'clsCerrarTicket.php';
 			else{
 				Swal.fire({
 					type:'question',
-					title: 'Confimación de envío de ticket',
+					title: 'Confirmación de envío de ticket',
 					text: '¿Está seguro de cerrar este Ticket?',
 					showCancelButton:true,
 					cancelButtonColor:"red",
