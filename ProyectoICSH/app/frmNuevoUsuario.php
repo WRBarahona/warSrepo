@@ -121,10 +121,13 @@ $nuevoUsuario = new NuevoUsuario();
 				                        <input type="button" name="btnModificar" value="Modificar" class="btn btn-warning" id="btnModificar">
 				                        <input type="button" name="btnEliminar" value="Eliminar" class="btn btn-danger" id="btnEliminar">
 				                        <input type="button" name="btnLimpiar" value="Limpiar" class="btn btn-secondary" id="btnLimpiar">
-	                    				<a href="frmDashBoardAdmin.php"><button class="btn btn-secondary">Volver</button></a><br><br>
+				                        <a href="frmDashboardAdmin.php"><input type="button" name="btnVolver" class="btn btn-secondary" id="btnVolver" value="Volver"></a><br><br>
+	                    				<!--<a href="frmDashboardAdmin.php"><button class="btn btn-secondary" id="btnVolver">Volver</button></a><br><br>-->
 									</div>
 								</div>
-
+							</div>
+						</div>
+					</form>
 <?php 
 
 	if (isset($_REQUEST['hdnGuardar'])) {
@@ -152,9 +155,6 @@ $nuevoUsuario = new NuevoUsuario();
 	}
 
  ?>
-							</div>
-						</div>
-					</form>
 					<!--Fin de formulario--><br>
 				</div>
 			</div>

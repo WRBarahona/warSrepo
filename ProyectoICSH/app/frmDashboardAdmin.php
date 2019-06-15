@@ -104,7 +104,7 @@ session_start();
 					<img  class="rounded mx-auto d-block" class="card-img-top"  src="../img/RptAdmin.png"><br>
 					<div class="card-body" align="center" style="background-color: #ECEFF1">							
 						<p class="card-tetx" align="center">
-							Vea y consulte los actuales y anteriores tickets.
+							Vea y consulte los tickets resueltos hasta la fecha.
 						</p>
 						<a href="frmVistaSoluciones.php" class="btn btn-secondary" align="">Buscar Ticket</a>
 					</div>
@@ -116,7 +116,7 @@ session_start();
 						<img  class="rounded mx-auto d-block" class="card-img-top"  src="../img/ussers.png"><br>
 						<div class="card-body" align="center" style="background-color: #ECEFF1">							
 							<p class="card-tetx" align="center">
-								Vea y consulte los tickets resueltos hasta la fecha.
+								Gestione los usuarios actualmente registrados en el sistema.
 							</p>
 							<a href="frmNuevoUsuario.php" class="btn btn-secondary" align="">Administrar Usuarios</a>
 						</div>
