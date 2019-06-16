@@ -37,15 +37,15 @@ include 'clsCerrarTicket.php';
 				<div class="col-xs-4 col-md-4">
 					<h1 class="display-4" style="margin-top: 50px;">Soluciones Técnicas</h1>
 				</div> 
-				<div class="col-xs-6 col-md-6">
+				<div class="col-xs-4 col-md-4">
 					<img class="img-thumbnail"src="../img/logo2.jpg" alt="" id="logoEmpresa">
 				</div> 
-				<div class="col-xs-2 col-md-2" style="margin-top: 30px;">
+				<div class="col-xs-4 col-md-4" style="margin-top: 30px;">
 					<?php 
 					if (isset($_SESSION["usuario"])) {
 						print "Bienvenido ".$_SESSION["usuario"]["nombUsuario"].
 						"<br>";
-						print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-sm'>Cerrar sesión</button></a><br>";
+						print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";
 						$idUsuario =  $_SESSION["usuario"]["idUsuario"];	
                             //echo $idUsuario;
 						if ($_SESSION["usuario"]["rol"]==2) {

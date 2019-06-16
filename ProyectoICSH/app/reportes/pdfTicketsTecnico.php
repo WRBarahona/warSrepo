@@ -12,6 +12,7 @@ $sql="SELECT t3.idTicket as Id_Ticket, t3.fecha as Fecha_Resolucion, t3.categori
 			t2.idTecnico = t3.idTecnico
 			where t1.idUsuario = $idUsuario";
 $resultado = mysqli_query($conexion,$sql);
+
 $sqlImg="select foto from tecnico where idUsuario = $idUsuario";
 $respuestaImg = mysqli_query($conexion,$sqlImg);
 

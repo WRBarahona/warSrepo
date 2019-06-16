@@ -7,6 +7,7 @@ $Solucion=new Solucion();
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="../img/icono.png">
 	<meta charset="UTF-8">
 	<title>Reportes</title>
 	<meta name="viewpot" content="width=device-width,Initial-escale=1,Maximun-scale=1">
@@ -32,8 +33,7 @@ $Solucion=new Solucion();
 					<?php 
 						if (isset($_SESSION["usuario"])) {
 							if ($_SESSION["usuario"]["rol"]=='3') {
-								print "Bienvenido ".$_SESSION["usuario"]["nombUsuario"].
-									"(".$_SESSION["usuario"]["rol"].").<br>";
+								print "<h1 class ='display-4'; style='font-size:25px;'>Bienvenido/a <b>".$_SESSION["usuario"]["nombUsuario"]. "</b></h1>";
 	                            print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";
 	                        }
 							else{
@@ -254,7 +254,7 @@ Highcharts.chart('container1', {
 });
 		</script><br>
 		<div align="right">
-                    <a href="frmDashboardAdmin.php"><button class="btn btn-secondary btn-lg">Volver</button></a>
+                    <a href="frmGraficos.php"><button class="btn btn-secondary btn-lg">Volver</button></a>
 		</div>
 
 		</div>

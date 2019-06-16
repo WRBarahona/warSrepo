@@ -100,7 +100,7 @@ include 'enviar.php';
 									<br>	
 									<b><label class="control-label">Seleccione su departamento</label></b>
 									<select id="txtDepartamento" name="txtDepartamento" class="form-control">
-										<option value=""></option>
+										<option value="">Seleccionar</option>
 										<option value="RRHH">RRHH</option>
 										<option value="Contaduría">Contaduría</option>
 										<option value="Compras y suministros">Compras y suministros</option>
@@ -109,7 +109,7 @@ include 'enviar.php';
 									<br>
 
 									<b><label class="control-label">Ingrese su Nombre</label></b>
-									<input class="form-control" name="txtNombre" type="text" id="txtNombre">
+									<input class="form-control" placeholder="Nombre" name="txtNombre" type="text" id="txtNombre">
 									<br>
 
 									<b><label class="control-label">Teléfono / Celular</label></b>

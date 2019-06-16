@@ -11,6 +11,7 @@ $asignarTicket = new asignarTicket();
 <head>
 	<meta charset="UTF-8">
 	<title>Asignación de Ticket</title>
+	<link rel="icon" href="../img/icono.png">
 	<meta name="viewpot" content="width=device-width,Initial-escale=1,Maximun-scale=1">
 	<script src="../plugins/js/jquery.js"></script>        
 	<script src="../plugins/js/sweetalert2.all.min.js"></script>
@@ -42,8 +43,7 @@ $asignarTicket = new asignarTicket();
 					<?php 
 						if (isset($_SESSION["usuario"])) {
 							if ($_SESSION["usuario"]["rol"]=='3') {
-								print "Bienvenido ".$_SESSION["usuario"]["nombUsuario"].
-									"(".$_SESSION["usuario"]["rol"].").<br>";
+								print "<h1 class ='display-4'; style='font-size:25px;'>Bienvenido/a <b>".$_SESSION["usuario"]["nombUsuario"]. "</b></h1>";
 	                            print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";
 	                        }
 							else{

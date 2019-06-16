@@ -25,11 +25,11 @@ session_start();
 				<div class="col-xs-4 col-md-4">
 					<img class="img-thumbnail"src="../img/logo2.jpg" alt="" id="logoEmpresa">
 				</div> 
-				<div class="col-xs-4 col-md-4" style="margin-top: 30px;">
+				<div class="col-xs-4 col-md-4" style="margin-top: 80px;">
 					<?php 
 						if (isset($_SESSION["usuario"])) {
-							print "Bienvenido ".$_SESSION["usuario"]["nombUsuario"]. "<br>";				 
-                            print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";	                            
+							print "<h1 class= 'display-4' style ='font-size: 25px;'>Bienvenido/a. <b>".$_SESSION["usuario"]["nombUsuario"]. "</b></h1><br>";				 
+                            //print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";	                            
                             if ($_SESSION["usuario"]["rol"]==1) {
                             	?>
                             	 <script type="text/javascript">
@@ -75,7 +75,19 @@ session_start();
 						</p>
 						<a href="frmListarTicketCliente.php" class="btn btn-secondary" align="">Ver Mis Tickets</a>
 					</div>
-				</di>			
+				</div>
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title" align="center">LOGUOT</h4>
+					</div><br>
+					<img  class="rounded mx-auto d-block" class="card-img-top"  src="../img/cerrarSesion.png"><br>
+					<div class="card-body" align="center" style="background-color: #ECEFF1">				
+						<p class="card-tetx" align="center">
+							Cerrar sesión activa.
+						</p>
+						<a href="acceso.php?cerrar=true'" class="btn btn-danger" align="">Cerrar Sesión</a>
+					</div>
+				</div>				
 			</div>
 		</div>
 	</section>

@@ -7,6 +7,7 @@ $vistaSoluciones = new VistaSoluciones();
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
+	<link rel="icon" href="../img/icono.png">
 	<title>Tickets Solucionados</title>
 	<meta name="viewpot" content="width=device-width,Initial-escale=1,Maximun-scale=1">
  	<script src="../plugins/js/jquery.js"></script>        
@@ -27,7 +28,7 @@ $vistaSoluciones = new VistaSoluciones();
 				<div class="col-xs-4 col-md-4" style="margin-top: 30px;">
 					<?php 
 						if (isset($_SESSION["usuario"])) {
-							print "Bienvenido/a  ".$_SESSION["usuario"]["nombUsuario"]."<br>";
+							print "<h1 class ='display-4'; style='font-size:25px;'>Bienvenido/a <b>".$_SESSION["usuario"]["nombUsuario"]. "</b></h1>";
                             print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>"; 
 						}
 						else{

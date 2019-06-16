@@ -9,6 +9,7 @@ $nuevoUsuario = new NuevoUsuario();
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="icon" href="../img/icono.png">
 	<title>Gestión Usuario</title>
 	<meta name="viewpot" content="width=device-width,Initial-escale=1,Maximun-scale=1">
 	<script src="../plugins/js/jquery.js"></script>        
