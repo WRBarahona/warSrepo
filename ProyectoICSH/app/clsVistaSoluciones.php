@@ -10,13 +10,13 @@ class VistaSoluciones{
 	}
 
 	public function verSoluciones() {
-	    $sql="SELECT * FROM solucionticket";
+	    $sql="SELECT t1.idTicket, t2.nombre, t1.fecha, t1.categoria, t1.parte, t1.comentario FROM solucionticket t1 INNER JOIN tecnico t2 ON t1.idTecnico=t2.idTecnico;";
 	    $resultado= $this->c->consultar($sql);
 	    $ncampos= mysqli_num_fields($resultado);
 	    $tabla="<table class='table table-bordered'>";
 	    $tabla.="<thead class='thead-dark'><tr>"; 
 	    $tabla.="<th><b>ID Ticket</b></th>";  
-	    $tabla.="<th><b>ID Técnico</b></th>";   
+	    $tabla.="<th><b>Técnico</b></th>";   
 	    $tabla.="<th><b>Fecha</b></th>";  
 	    $tabla.="<th><b>Categoría</b></th>";
 	    $tabla.="<th><b>Parte</b></th>";  

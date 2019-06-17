@@ -45,14 +45,14 @@
 		}
 
 		public function verAsignados() {
-        $sql="SELECT * FROM asignacion";
+        $sql="SELECT t1.idTicket, t2.nombre FROM asignacion t1 INNER JOIN tecnico t2 ON t1.idTecnico=t2.idTecnico;";
         $resultado= $this->c->consultar($sql);
         $ncampos= mysqli_num_fields($resultado);
         $tabla="<table class='table table-bordered'>";
         //Imprimiendo los encabezados de la tabla
         $tabla.="<thead class='thead-dark'><tr>"; //<-INICIO DE FILA DE ENCABEZADO
         $tabla.="<th><b>ID Ticket</b></th>";  
-        $tabla.="<th><b>ID Técnico</b></th>";   
+        $tabla.="<th><b>Técnico</b></th>";   
         $tabla.="</thead></tr>";//<-FIN DE FILA DE ENCABEZADO
         //IMPRIMIENDO EL CONTENIDO DE LA TABLA
         for($i=0;$i<$ncampos;$i++){

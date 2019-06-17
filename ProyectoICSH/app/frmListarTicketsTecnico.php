@@ -28,8 +28,13 @@ include 'clsCerrarTicket.php';
 				<div class="col-xs-4 col-md-4" style="margin-top: 30px;">
 					<?php 
 						if (isset($_SESSION["usuario"])) {
-							print "Bienvenido/a  ".$_SESSION["usuario"]["nombUsuario"]."<br>";
-                            print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";                            
+							if ($_SESSION["usuario"]["rol"]==2) {
+								print "Bienvenido/a  ".$_SESSION["usuario"]["nombUsuario"]."<br>";
+	                            print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";
+	                        }  
+							else{
+								header("Location: acceso.php?cerrar=true");
+							}	                          
 						}
 						else{
 							header("Location:../index.php");

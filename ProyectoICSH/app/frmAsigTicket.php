@@ -32,7 +32,7 @@ $asignarTicket = new asignarTicket();
 		});
 	</script>
 </head>
-<body background="../img/fondo2.jpg">
+<body style="background-color: #bfbfbf;">
 	<header id="cabecera">
 		<div class="container-fluid">
 			<div class="row">

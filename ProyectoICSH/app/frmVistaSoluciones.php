@@ -15,7 +15,7 @@ $vistaSoluciones = new VistaSoluciones();
 	<link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.css">	
 	<link rel="stylesheet" href="../plugins/css/estilosDashboard.css">
 </head>
-<body>
+<body >
 	<header id="cabecera">
 		<div class="container-fluid">
 			<div class="row">

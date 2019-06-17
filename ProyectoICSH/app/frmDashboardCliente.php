@@ -28,9 +28,10 @@ session_start();
 				<div class="col-xs-4 col-md-4" style="margin-top: 80px;">
 					<?php 
 						if (isset($_SESSION["usuario"])) {
-							print "<h1 class= 'display-4' style ='font-size: 25px;'>Bienvenido/a. <b>".$_SESSION["usuario"]["nombUsuario"]. "</b></h1><br>";				 
-                            //print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";	                            
+							
                             if ($_SESSION["usuario"]["rol"]==1) {
+							print "<h1 class= 'display-4' style ='font-size: 25px;'>Bienvenido/a. <b>".$_SESSION["usuario"]["nombUsuario"]. "</b></h1><br>";				 
+                            //print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";
                             	?>
                             	 <script type="text/javascript">
                                             $(document).ready(function(){
@@ -38,10 +39,12 @@ session_start();
                                             });
                                 </script>
                             	<?php
-                            	}
-							}
+                            }
 							else{
-							header("Location:../index.php");
+								header("Location: acceso.php?cerrar=true");
+							}	
+						}else{
+						header("Location:../index.php");
 						}
 					 ?>
 				</div> 

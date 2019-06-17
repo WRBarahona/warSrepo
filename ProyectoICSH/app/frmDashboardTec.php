@@ -29,15 +29,15 @@ include 'clsCerrarTicket.php';
 				<div class="col-xs-4 col-md-4" style="margin-top: 30px;">
 					<?php 
 					if (isset($_SESSION["usuario"])) {
-						print "<h1 class ='display-4'; style='font-size:25px;'>Bienvenido/a. Téc.<b>".$_SESSION["usuario"]["nombUsuario"]. "</b></h1>";
-						// --*/INCIO*/ MOSTRANDO LA FOTO DEL TECNICO SEGUN SU ID -- //
-						$idUsuario =  $_SESSION["usuario"]["idUsuario"];
-
-						$img = new solucionTicket();
-						$img->MostrarFoto($idUsuario);
-
-						// --*/FIN*/ MOSTRANDO LA FOTO DEL TECNICO SEGUN SU ID -- //	
 						if ($_SESSION["usuario"]["rol"]==2) {
+							print "<h1 class ='display-4'; style='font-size:25px;'>Bienvenido/a. Téc.<b>".$_SESSION["usuario"]["nombUsuario"]. "</b></h1>";
+							// --*/INCIO*/ MOSTRANDO LA FOTO DEL TECNICO SEGUN SU ID -- //
+							$idUsuario =  $_SESSION["usuario"]["idUsuario"];
+
+							$img = new solucionTicket();
+							$img->MostrarFoto($idUsuario);
+
+							// --*/FIN*/ MOSTRANDO LA FOTO DEL TECNICO SEGUN SU ID -- //	
 							?>
 							<script type="text/javascript">
 								$(document).ready(function(){
@@ -46,6 +46,9 @@ include 'clsCerrarTicket.php';
 							</script>
 							<?php
 						}
+						else{
+							header("Location: acceso.php?cerrar=true");
+						}	
 					}
 					else{
 						header("Location:../index.php");
