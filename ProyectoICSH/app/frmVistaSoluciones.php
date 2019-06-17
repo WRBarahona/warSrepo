@@ -8,7 +8,7 @@ $vistaSoluciones = new VistaSoluciones();
 <head>
 	<meta charset="UTF-8">
 	<link rel="icon" href="../img/icono.png">
-	<title>Tickets Solucionados</title>
+	<title>Vista de tickets solucionados</title>
 	<meta name="viewpot" content="width=device-width,Initial-escale=1,Maximun-scale=1">
  	<script src="../plugins/js/jquery.js"></script>        
 	<script src="../plugins/js/sweetalert2.all.min.js"></script>
@@ -28,13 +28,18 @@ $vistaSoluciones = new VistaSoluciones();
 				<div class="col-xs-4 col-md-4" style="margin-top: 30px;">
 					<?php 
 						if (isset($_SESSION["usuario"])) {
-							print "<h1 class ='display-4'; style='font-size:25px;'>Bienvenido/a <b>".$_SESSION["usuario"]["nombUsuario"]. "</b></h1>";
-                            print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>"; 
-						}
+							if ($_SESSION["usuario"]["rol"]=='3') {
+								print "<h1 class ='display-4'; style='font-size:25px;'>Bienvenido/a <b>".$_SESSION["usuario"]["nombUsuario"]. "</b></h1>";
+	                            print "<a style='text-decoration:none; color:#fff' href='acceso.php?cerrar=true'><button  class='btn btn-danger btn-lg'>Cerrar sesión</button></a><br>";
+	                        }
+							else{
+								header("Location: acceso.php?cerrar=true");
+							}	
+                        }
 						else{
 							header("Location:../index.php");
 						}
-					 ?>					 
+					 ?>				 
 				</div>
 			</div>
 		</div>
@@ -48,7 +53,7 @@ $vistaSoluciones = new VistaSoluciones();
 			<span class="navbar-text"></span>
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" href="frmDashboardAdmin.php">INICIO</a>
+					<a class="nav-link" href="frmDashboardAdmin.php">Inicio</a>
 				</li>
  				<li class="nav-item">
 					<a class="nav-link" href="frmAsigTicket.php">Asignación Ticket</a>
@@ -63,10 +68,10 @@ $vistaSoluciones = new VistaSoluciones();
 					<a class="nav-link" href="frmGraficos.php">Gráficos</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="frmVistaSoluciones.php">Vista tickets Solucionados</a>
+					<a class="nav-link" href="frmVistaSoluciones.php">Vista de tickets solucionados</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="frmVistaTickClientes.php">Vista tickets pendientes</a>
+					<a class="nav-link" href="frmVistaTickClientes.php">Vista de tickets pendientes</a>
 				</li>
 			</ul>
 		</div>

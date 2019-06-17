@@ -68,7 +68,7 @@ $asignarTicket = new asignarTicket();
 			<span class="navbar-text"></span>
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" href="frmDashboardAdmin.php">INICIO</a>
+					<a class="nav-link" href="frmDashboardAdmin.php">Inicio</a>
 				</li>
  				<li class="nav-item">
 					<a class="nav-link" href="frmAsigTicket.php">Asignación Ticket</a>
@@ -83,10 +83,10 @@ $asignarTicket = new asignarTicket();
 					<a class="nav-link" href="frmGraficos.php">Gráficos</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="frmVistaSoluciones.php">Vista tickets Solucionados</a>
+					<a class="nav-link" href="frmVistaSoluciones.php">Vista de tickets solucionados</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="frmVistaTickClientes.php">Vista tickets pendientes</a>
+					<a class="nav-link" href="frmVistaTickClientes.php">Vista de tickets pendientes</a>
 				</li>
 			</ul>
 		</div>

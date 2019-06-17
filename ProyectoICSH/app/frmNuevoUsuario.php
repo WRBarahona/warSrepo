@@ -10,7 +10,7 @@ $nuevoUsuario = new NuevoUsuario();
 <head>
 	<meta charset="UTF-8">
 	<link rel="icon" href="../img/icono.png">
-	<title>Gestión Usuario</title>
+	<title>Gestión de usuarios</title>
 	<meta name="viewpot" content="width=device-width,Initial-escale=1,Maximun-scale=1">
 	<script src="../plugins/js/jquery.js"></script>        
 	<script src="../plugins/js/sweetalert2.all.min.js"></script>
@@ -96,10 +96,10 @@ $nuevoUsuario = new NuevoUsuario();
 			<span class="navbar-text"></span>
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" href="frmDashboardAdmin.php">INICIO</a>
+					<a class="nav-link" href="frmDashboardAdmin.php">Inicio</a>
 				</li>
  				<li class="nav-item">
-					<a class="nav-link" href="frmAsigTicket.php">Asignación Ticket</a>
+					<a class="nav-link" href="frmAsigTicket.php">Asignación de ticket</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="frmTecnico.php">Técnicos</a>
@@ -111,10 +111,10 @@ $nuevoUsuario = new NuevoUsuario();
 					<a class="nav-link" href="frmGraficos.php">Gráficos</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="frmVistaSoluciones.php">Vista tickets Solucionados</a>
+					<a class="nav-link" href="frmVistaSoluciones.php">Vista de tickets solucionados</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="frmVistaTickClientes.php">Vista tickets pendientes</a>
+					<a class="nav-link" href="frmVistaTickClientes.php">Vista de tickets pendientes</a>
 				</li>
 			</ul>
 		</div>
@@ -122,7 +122,7 @@ $nuevoUsuario = new NuevoUsuario();
 	<!--FIN NAV-->
 	<section>
 		<div class="container alert alert-info" role="alert">
-			<center><h1><b>Gestión Usuarios</b></h1></center>
+			<center><h1><b>Gestión de usuarios</b></h1></center>
 		</div>
 		<div class="container jumbotron col-md-10">
 			<div class="row">
@@ -137,7 +137,7 @@ $nuevoUsuario = new NuevoUsuario();
 									<b><label class="control-label">Id Usuario</label></b>
 									<input class="form-control" type="text" name="txtIdUsuario" id="idUsuario" required="" placeholder="--ID de Usuario--" pattern="" maxlength="10" min="[A-Z a-z]+" title="Ingrese el Id de Usuario" autofocus="true"><br>
 
-									<b><label class="control-label">Ingrese el nombre de Usuario</label></b>
+									<b><label class="control-label">Ingrese el nombre de usuario</label></b>
 									<input class="form-control" type="text" name="txtNombUsuario" id="nombUsuario" required="" placeholder="--Nombre de usuario--" pattern="[A-Z a-z]+" maxlength="15" min="" title="Ingrese el nombre de usuario"><br>
 									<div class="row">
 										<div class="col-md-6 col-lg-6 col-sm-12">
@@ -145,12 +145,12 @@ $nuevoUsuario = new NuevoUsuario();
 											<input class="form-control" type="password" name="txtContraseña" id="txtContraseña" required="" placeholder="--Digite la contraseña de usuario--">
 										</div>
 										<div class="col-md-6 col-lg-6 col-sm-12">
-											<b><label class="control-label">Confirmar Contraseña</label></b>
+											<b><label class="control-label">Confirmar contraseña</label></b>
 											<input class="form-control" type="password" name="txtConfirmar" id="txtConfirmar" required="" placeholder="--Digite la contraseña de usuario--">
 										</div>
 									</div>
 									<br>
-									<b><label>Nivel de Usuario</label></b>
+									<b><label>Nivel de usuario</label></b>
 									<input class="form-control" type="text" name="txtRol" id="txtRol" required="" readonly="" title="Ingrese una contraseña" value="admin"><br>
 								</div>
 								<div class="row">
@@ -233,7 +233,7 @@ $nuevoUsuario = new NuevoUsuario();
                 Swal.fire({
                     type:"warning",
                     title:"Error",
-                    text: "Debe completar todos los campos para poder Ingresar un nuevo usuario",
+                    text: "Debe completar todos los campos para poder ingresar un nuevo usuario",
                     confirmButtonText:"Confirmar",
                  });
             }
@@ -284,7 +284,7 @@ $nuevoUsuario = new NuevoUsuario();
                         cancelButtonColor:"red",
                         confirmButtonColor:"green",
                         cancelButtonText:"Cancelar",
-                        confirmButtonText:"Si, Modificar.",
+                        confirmButtonText:"Sí, Modificar.",
                 }).then((result)=>{
                     if(result.value){
                         $("#formNUsuario").submit();                          

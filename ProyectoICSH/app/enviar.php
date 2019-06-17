@@ -66,7 +66,7 @@ require 'PHPmailer/SMTP.php';
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = $nombre;
-    $mail->Body    = "<br> <b>Nombre:</b> ".$nombre."<br><b>Departamento:</b> ".$departamento."<br><b>Fecha de envio:</b> ".$fecha."<br><b>Telefono:</b> ".$telefono."<br><br> <h3><b>Descripción:</b> ".$descrip."</h3>";
+    $mail->Body    = "<br> <b>Nombre:</b> ".$nombre."<br><b>Departamento:</b> ".$departamento."<br><b>Fecha de envío:</b> ".$fecha."<br><b>Teléfono:</b> ".$telefono."<br><br> <h3><b>Descripción:</b> ".$descrip."</h3>";
     //$mail->AltBody = 
 
     $mail->send();
@@ -85,7 +85,7 @@ require 'PHPmailer/SMTP.php';
                         Swal.fire({
                           type: 'error',
                           title: 'Oops...',
-                          text: '¡Algo salió mal! Vuelve a intentarlo metodo de envio.',
+                          text: '¡Algo salió mal! Vuelve a intentarlo método de envío.',
                           showConfirmButton: false,
                         })
                     </script>";
@@ -96,7 +96,7 @@ require 'PHPmailer/SMTP.php';
                         Swal.fire({
                           type: 'error',
                           title: 'Oops...',
-                          text: '¡Algo salió mal! Vuelve a intentarlo metodo fuera de envio.',
+                          text: '¡Algo salió mal! Vuelve a intentarlo método fuera de envío.',
                           showConfirmButton: false,
                         })
                     </script>";

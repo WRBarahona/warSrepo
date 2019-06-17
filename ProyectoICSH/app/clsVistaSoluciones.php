@@ -16,7 +16,7 @@ class VistaSoluciones{
 	    $tabla="<table class='table table-bordered'>";
 	    $tabla.="<thead class='thead-dark'><tr>"; 
 	    $tabla.="<th><b>ID Ticket</b></th>";  
-	    $tabla.="<th><b>ID Tecnico</b></th>";   
+	    $tabla.="<th><b>ID Técnico</b></th>";   
 	    $tabla.="<th><b>Fecha</b></th>";  
 	    $tabla.="<th><b>Categoría</b></th>";
 	    $tabla.="<th><b>Parte</b></th>";  

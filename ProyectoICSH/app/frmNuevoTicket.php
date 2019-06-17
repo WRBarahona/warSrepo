@@ -8,7 +8,7 @@ include 'enviar.php';
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Crear un nuevo Ticket</title>
+	<title>Crear un nuevo ticket</title>
 	<meta name="viewpot" content="width=device-width,Initial-escale=1,Maximun-scale=1">
 	<script src="../plugins/js/jquery.js"></script>        
 	<script src="../plugins/js/sweetalert2.all.min.js"></script>
@@ -64,13 +64,13 @@ include 'enviar.php';
 			<span class="navbar-text"></span>
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" href="frmDashboardCliente.php">INICIO</a>
+					<a class="nav-link" href="frmDashboardCliente.php">Inicio</a>
 				</li>
  				<li class="nav-item">
-					<a class="nav-link" href="frmNuevoTicket.php">Nuevo Ticket</a>
+					<a class="nav-link" href="frmNuevoTicket.php">Nuevo ticket</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="frmListarTicketCliente.php">Mis Tickets </a>
+					<a class="nav-link" href="frmListarTicketCliente.php">Mis tickets</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#"></a>
@@ -81,7 +81,7 @@ include 'enviar.php';
 	<!--FIN NAV-->
 	<section>
 		<div class="container alert alert-info" role="alert" style="margin-top: 15px;">
-			<center><h1><b>Nuevo  Ticket</b></h1></center>
+			<center><h1><b>Nuevo ticket</b></h1></center>
 		</div>
 		<div  class="container jumbotron" style="width: 75%;">
 			<div class="row">
@@ -92,7 +92,7 @@ include 'enviar.php';
 						<div class="container">
 							<div class="row">
 								<div class="col-md-6 col-lg-6 col-sm-12">
-									<b><label class="control-label">No Carnet</label></b>				
+									<b><label class="control-label">N° Carnet</label></b>				
 										<?php 
 											 $tic = new Ticket();
 											 $tic->mostrarCarnet();
@@ -104,15 +104,15 @@ include 'enviar.php';
 										<option value="RRHH">RRHH</option>
 										<option value="Contaduría">Contaduría</option>
 										<option value="Compras y suministros">Compras y suministros</option>
-										<option value="Otros">Otros</option>
+										<option value="Otros">Otro</option>
 									</select>
 									<br>
 
-									<b><label class="control-label">Ingrese su Nombre</label></b>
+									<b><label class="control-label">Ingrese su nombre</label></b>
 									<input class="form-control" placeholder="Nombre" name="txtNombre" type="text" id="txtNombre">
 									<br>
 
-									<b><label class="control-label">Teléfono / Celular</label></b>
+									<b><label class="control-label">Teléfono/Celular</label></b>
                                                                         <input class="form-control" type="text" id="txtTelefono"  name="txtTelefono"  placeholder="0000-0000" onkeypress="return soloNumeros(event)" maxlength="9" minlength="9">
 									<br>
 								</div>
@@ -132,7 +132,7 @@ include 'enviar.php';
 										<a href="reportes/pdfTicketCliente.php" target="_blank">
 											<input type="button" name="btnImprimir" class="btn btn-dark" id="btnImprimir" value="Imprimir Ticket">
 										</a>
-                                                                        </center>
+                                    </center>
 								</div>								
 							</div>
 						</div>
@@ -187,7 +187,7 @@ include 'enviar.php';
 			else{
 				Swal.fire({
 					type:'question',
-					title: 'Confimación de envío de ticket',
+					title: 'Confirmación de envío de ticket',
 					text: '¿Está seguro de enviar este ticket?',
 					showCancelButton:true,
                     cancelButtonColor:"red",

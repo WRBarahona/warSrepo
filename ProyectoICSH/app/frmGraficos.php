@@ -8,7 +8,7 @@ $Solucion=new Solucion();
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Reportes</title>
+	<title>Reporte gráfico de tickets solucionados</title>
 	<link rel="icon" href="../img/icono.png">
 	<meta name="viewpot" content="width=device-width,Initial-escale=1,Maximun-scale=1">
 	<script src="../plugins/js/jquery.js"></script>        
@@ -58,10 +58,10 @@ $Solucion=new Solucion();
 			<span class="navbar-text"></span>
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" href="frmDashboardAdmin.php">INICIO</a>
+					<a class="nav-link" href="frmDashboardAdmin.php">Inicio</a>
 				</li>
  				<li class="nav-item">
-					<a class="nav-link" href="frmAsigTicket.php">Asignación Ticket</a>
+					<a class="nav-link" href="frmAsigTicket.php">Asignación de ticket</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="frmTecnico.php">Técnicos</a>
@@ -73,10 +73,10 @@ $Solucion=new Solucion();
 					<a class="nav-link" href="frmGraficos.php">Gráficos</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="frmVistaSoluciones.php">Vista tickets Solucionados</a>
+					<a class="nav-link" href="frmVistaSoluciones.php">Vista de tickets Solucionados</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="frmVistaTickClientes.php">Vista tickets pendientes</a>
+					<a class="nav-link" href="frmVistaTickClientes.php">Vista de tickets pendientes</a>
 				</li>
 			</ul>
 		</div>
@@ -206,7 +206,7 @@ Highcharts.chart('container1', {
 						<div class="card-body" align="center" style="background-color: #ECEFF1">							
 							<p class="card-tetx" align="center">
 							</p>
-                                                        <a href="frmDashboardAdmin.php" class="btn btn-secondary" align="">Volver</a>
+                             <a href="frmDashboardAdmin.php" class="btn btn-secondary" align="">Volver</a>
 						</div>
 					</div>
 			</div>

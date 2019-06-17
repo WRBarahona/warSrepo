@@ -70,7 +70,7 @@ include 'clsCerrarTicket.php';
 			<span class="navbar-text"></span>
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" href="frmDashboardTec.php">INICIO</a>
+					<a class="nav-link" href="frmDashboardTec.php">Inicio</a>
 				</li>
  				<li class="nav-item">
 					<a class="nav-link" href="frmCierreTicket.php">Cierre de Ticket</a>
@@ -96,7 +96,7 @@ include 'clsCerrarTicket.php';
 							<div class="row">
 								<div class="col-md-6 col-lg-6 col-sm-12">
 									<!--DEPENDIENDO DEL TECNICO SE LE MOSTRARA EL TICKET A SOLUCIONAR-->
-									<b><label class="control-label">Ingrese el ID del ticket que soluciono</label></b>
+									<b><label class="control-label">Ingrese el ID del ticket que solucionó</label></b>
 									<?php 
 									$idTick = new solucionTicket();
 									$idUsuario = $_SESSION["usuario"]["idUsuario"];
@@ -141,7 +141,7 @@ include 'clsCerrarTicket.php';
 										});
 									</script>
 									<br>
-									<label  class="control-label"><b>Parte Solucionada según categoría</b></label>
+									<label  class="control-label"><b>Parte solucionada según categoría</b></label>
 									<div class="row">
 										<div  id="selectH" class="col-md-6 col-sm-6 col-lg-6">
 											Hardware
@@ -151,13 +151,13 @@ include 'clsCerrarTicket.php';
 												<option value="Memoria RAM">Memoria RAM</option>
 												<option value="Monitor">Monitor</option>
 												<option value="Tarjeta de red">Tarjeta de red</option>
-												<option value="Tarjeta Madre">Tarjeta Madre</option>
+												<option value="Tarjeta Madre">Tarjeta madre</option>
 												<option value="Disco duro">Disco duro</option>
 												<option value="Tarjeta de sonido">Tarjeta de sonido</option>
 												<option value="Ventilador">Ventilador</option>
 												<option value="Fuente de poder">Fuente de poder</option>
-												<option value="Bateria">Bateria</option>
-												<option value="Otro">otro</option>
+												<option value="Bateria">Batería</option>
+												<option value="Otro">Otro</option>
 											</select>
 										</div>
 										<div class="col-md-6 col-sm-6 col-lg-6">
@@ -240,7 +240,7 @@ include 'clsCerrarTicket.php';
 				Swal.fire({
 					type: 'error',
 					title: 'Oops...',
-					text: '¡Llene todos los campos para Cerrar Ticket!',		  				   		 	
+					text: '¡Llene todos los campos para cerrar el ticket!',		  				   		 	
 				});				 
 			}
 			else{

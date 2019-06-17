@@ -61,7 +61,7 @@ session_start();
 						<p class="card-tetx" align="center">
 							Realice y envíe un nuevo ticket para reportar equipo defectuoso o dañado.
 						</p>
-						<a href="frmNuevoTicket.php" class="btn btn-secondary" align="">Crear Nuevo Ticket</a>
+						<a href="frmNuevoTicket.php" class="btn btn-secondary" align="">Crear nuevo ticket</a>
 					</div>
 				</div>
 				<div class="card">
@@ -73,19 +73,19 @@ session_start();
 						<p class="card-tetx" align="center">
 							Busque y consulte sus anteriores tickets. Verifique que se haya atendido su problema.
 						</p>
-						<a href="frmListarTicketCliente.php" class="btn btn-secondary" align="">Ver Mis Tickets</a>
+						<a href="frmListarTicketCliente.php" class="btn btn-secondary" align="">Ver mis tickets</a>
 					</div>
 				</div>
 				<div class="card">
 					<div class="card-header">
-						<h4 class="card-title" align="center">LOGUOT</h4>
+						<h4 class="card-title" align="center">LOGOUT</h4>
 					</div><br>
 					<img  class="rounded mx-auto d-block" class="card-img-top"  src="../img/cerrarSesion.png"><br>
 					<div class="card-body" align="center" style="background-color: #ECEFF1">				
 						<p class="card-tetx" align="center">
 							Cerrar sesión activa.
 						</p>
-						<a href="acceso.php?cerrar=true'" class="btn btn-danger" align="">Cerrar Sesión</a>
+						<a href="acceso.php?cerrar=true'" class="btn btn-danger" align="">Cerrar sesión</a>
 					</div>
 				</div>				
 			</div>

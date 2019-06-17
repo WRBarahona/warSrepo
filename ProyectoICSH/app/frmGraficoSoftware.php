@@ -9,7 +9,7 @@ $Solucion=new Solucion();
 <head>
 	<link rel="icon" href="../img/icono.png">
 	<meta charset="UTF-8">
-	<title>Reportes</title>
+	<title>Reporte gráfico de software</title>
 	<meta name="viewpot" content="width=device-width,Initial-escale=1,Maximun-scale=1">
 	<script src="../plugins/js/jquery.js"></script>        
 	<script src="../plugins/js/sweetalert2.all.min.js"></script>
@@ -58,10 +58,10 @@ $Solucion=new Solucion();
 			<span class="navbar-text"></span>
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" href="frmDashboardAdmin.php">INICIO</a>
+					<a class="nav-link" href="frmDashboardAdmin.php">Inicio</a>
 				</li>
  				<li class="nav-item">
-					<a class="nav-link" href="frmAsigTicket.php">Asignación Ticket</a>
+					<a class="nav-link" href="frmAsigTicket.php">Asignación ticket</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="frmTecnico.php">Técnicos</a>
@@ -73,10 +73,10 @@ $Solucion=new Solucion();
 					<a class="nav-link" href="frmGraficos.php">Gráficos</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="frmVistaSoluciones.php">Vista tickets Solucionados</a>
+					<a class="nav-link" href="frmVistaSoluciones.php">Vista de tickets solucionados</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="frmVistaTickClientes.php">Vista tickets pendientes</a>
+					<a class="nav-link" href="frmVistaTickClientes.php">Vista de tickets pendientes</a>
 				</li>
 			</ul>
 		</div>
@@ -84,7 +84,7 @@ $Solucion=new Solucion();
 	<!--FIN NAV-->
 	<section>
 		<div class="container alert alert-info" role="alert">
-			<center><h1><b>Reporte de fallas de Software</b></h1></center>
+			<center><h1><b>Reporte de fallas de software</b></h1></center>
 		</div>
 		<div class="container jumbotron col-md-10">
 			<form action="#" method="POST" id="miform">

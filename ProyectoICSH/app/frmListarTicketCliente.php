@@ -6,7 +6,7 @@ include 'clsTicket.php';
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Mis tickets -- Cliente</title>
+	<title>Mis tickets - Cliente</title>
 	<link rel="icon" href="../img/icono.png">
 	<meta name="viewpot" content="width=device-width,Initial-escale=1,Maximun-scale=1">
  	<script src="../plugins/js/jquery.js"></script>        
@@ -47,7 +47,7 @@ include 'clsTicket.php';
 			<span class="navbar-text"></span>
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" href="frmDashboardCliente.php">INICIO</a>
+					<a class="nav-link" href="frmDashboardCliente.php">Inicio</a>
 				</li>
  				<li class="nav-item">
 					<a class="nav-link" href="frmNuevoTicket.php">Nuevo ticket</a>
@@ -63,9 +63,9 @@ include 'clsTicket.php';
 	</nav>
 	  
 	<section class="container">
-		<h1 class="display-4" align="center">Busqueda de tickets</h1> 
-		<h1 class="display-4" align="center" style="font-size: 35px;">Filtre sus tickets por: Resueltos o Pendientes</h2><br>
-		<p align="center"><b>Leyenda de Estado</b> 0 ->Resuelto 1->Pendiente</p>
+		<h1 class="display-4" align="center">Búsqueda de tickets</h1> 
+		<h1 class="display-4" align="center" style="font-size: 35px;">Filtre sus tickets por: "Resueltos" o "Pendientes"</h2><br>
+		<p align="center"><b>Leyenda de Estado</b> (0) => Resuelto (1) => Pendiente</p>
 		<hr width="1000">
 		<br>
 		<form action="#" method="post" id="miform">
@@ -129,7 +129,7 @@ include 'clsTicket.php';
 			 			Swal.fire({
 						  type: 'error',
 						  title: 'Oops...',
-						  text: '¡Elija un parametro de búsqueda para mostrar los tickets!',  				   		 	
+						  text: '¡Elija un parámetro de búsqueda para mostrar los tickets!',  				   		 	
 						});
 			 		}else{
 			 			$("#d1").prepend("<input type='hidden' name='hdnBuscar' value='1'>");

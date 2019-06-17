@@ -93,9 +93,9 @@ session_start();
 					<img  class="rounded mx-auto d-block" class="card-img-top"  src="../img/tecnico.png"><br>
 					<div class="card-body" align="center" style="background-color: #ECEFF1">							
 						<p class="card-tetx" align="center">
-							Ingrese, busque, vea y modifique información de los tecnicos.
+							Ingrese, busque, vea y modifique información de los técnicos.
 						</p>
-						<a href="frmTecnico.php" class="btn btn-secondary" align="">Administrar Tecnicos</a>
+						<a href="frmTecnico.php" class="btn btn-secondary" align="">Administrar técnicos</a>
 					</div>
 				</div>
 				<div class="card">
@@ -107,7 +107,7 @@ session_start();
 						<p class="card-tetx" align="center">
 							Vea y consulte los tickets resueltos hasta la fecha.
 						</p>
-						<a href="frmVistaSoluciones.php" class="btn btn-secondary" align="">Buscar Ticket</a>
+						<a href="frmVistaSoluciones.php" class="btn btn-secondary" align="">Buscar ticket</a>
 					</div>
 				</div>
 				<div class="card">
@@ -119,7 +119,7 @@ session_start();
 							<p class="card-tetx" align="center">
 								Gestione los usuarios actualmente registrados en el sistema.
 							</p>
-							<a href="frmNuevoUsuario.php" class="btn btn-secondary" align="">Administrar Usuarios</a>
+							<a href="frmNuevoUsuario.php" class="btn btn-secondary" align="">Administrar usuarios</a>
 						</div>
 				</div>
 				<div class="card">
@@ -131,7 +131,7 @@ session_start();
 						<p class="card-tetx" align="center">
 							Vea y consulte todos los tickets aun sin resolver.
 						</p>
-						<a href="frmVistaTickClientes.php" class="btn btn-secondary" align="">Buscar Ticket</a>
+						<a href="frmVistaTickClientes.php" class="btn btn-secondary" align="">Buscar ticket</a>
 					</div>
 				</div>
 					<!--<div class="card">

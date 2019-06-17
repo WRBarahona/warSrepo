@@ -7,7 +7,7 @@ include 'clsCerrarTicket.php';
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Mis tickets -- Cliente</title>
+	<title>Mis tickets - Técnico</title>
 	<link rel="icon" href="../img/icono.png">
 	<meta name="viewpot" content="width=device-width,Initial-escale=1,Maximun-scale=1">
  	<script src="../plugins/js/jquery.js"></script>        
@@ -48,10 +48,10 @@ include 'clsCerrarTicket.php';
 			<span class="navbar-text"></span>
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" href="frmDashboardTec.php">INICIO</a>
+					<a class="nav-link" href="frmDashboardTec.php">Inicio</a>
 				</li>
  				<li class="nav-item">
-					<a class="nav-link" href="frmCierreTicket.php">Cierre de Ticket</a>
+					<a class="nav-link" href="frmCierreTicket.php">Cierre de ticket</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="frmListarTicketsTecnico.php">Mis tickets</a>

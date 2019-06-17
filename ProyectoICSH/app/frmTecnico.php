@@ -8,7 +8,7 @@ $tecnico=new Tecnico();
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Gestión de tecnicos</title>
+	<title>Gestión de técnicos</title>
 	<link rel="icon" href="../img/icono.png">
 	<meta name="viewpot" content="width=device-width,Initial-escale=1,Maximun-scale=1">
 	<script src="../plugins/js/jquery.js"></script>        
@@ -138,10 +138,10 @@ $tecnico=new Tecnico();
 			<span class="navbar-text"></span>
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" href="frmDashboardAdmin.php">INICIO</a>
+					<a class="nav-link" href="frmDashboardAdmin.php">Inicio</a>
 				</li>
  				<li class="nav-item">
-					<a class="nav-link" href="frmAsigTicket.php">Asignación Ticket</a>
+					<a class="nav-link" href="frmAsigTicket.php">Asignación de ticket</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="frmTecnico.php">Técnicos</a>
@@ -153,10 +153,10 @@ $tecnico=new Tecnico();
 					<a class="nav-link" href="frmGraficos.php">Gráficos</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="frmVistaSoluciones.php">Vista tickets Solucionados</a>
+					<a class="nav-link" href="frmVistaSoluciones.php">Vista de tickets solucionados</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="frmVistaTickClientes.php">Vista tickets pendientes</a>
+					<a class="nav-link" href="frmVistaTickClientes.php">Vista de tickets pendientes</a>
 				</li>
 			</ul>
 		</div>
@@ -164,7 +164,7 @@ $tecnico=new Tecnico();
 	<!--FIN NAV-->
 	<section>
 		<div class="container alert alert-info" role="alert">
-			<center><h1><b>Gestión de Tecnicos</b></h1></center>
+			<center><h1><b>Gestión de técnicos</b></h1></center>
 		</div>
 		<div class="container jumbotron">
 			<div class="row">
@@ -182,7 +182,7 @@ $tecnico=new Tecnico();
 									<b><label class="control-label">Id de técnico</label></b>
 									<input class="form-control" type="text" name="txtId" id="txtId" required="" placeholder="--Digite el N° de ID--" autofocus="true"><br>
 
-									<b><label class="control-label">No Carnet</label></b>
+									<b><label class="control-label">N° Carnet</label></b>
 									<input class="form-control" type="text" name="txtCarnet" id="txtCarnet" required="" placeholder="--Digite N° de Carnet--">
 								</div>
 								<div class="col-md-6 col-lg-6 col-sm-12">
@@ -197,7 +197,7 @@ $tecnico=new Tecnico();
 							<br>
 							<div class="row">
 								<div class="col-md-6 col-lg-6 col-sm-12">
-									<b><label class="control-label">Teléfono / Celular</label></b>
+									<b><label class="control-label">Teléfono/Celular</label></b>
                                                                         <input class="form-control" type="text" name="txtTelefono" id="txtTelefono" placeholder="####-####" required  onkeypress=" return soloNumeros(event)" minlength="9" maxlength="9"value="">
 								</div>
 								<div class="col-md-6 col-lg-6 col-sm-12">
@@ -206,7 +206,7 @@ $tecnico=new Tecnico();
 								</div>
 							</div>
 
-							<br><center><h4><b>Usuario de técnico</b></h4></center>
+							<br><center><h4><b>Usuario del técnico</b></h4></center>
 
 							<div class="row">
 								<div class="col-md-6 col-lg-6 col-sm-12">
@@ -224,7 +224,7 @@ $tecnico=new Tecnico();
 									<input class="form-control" type="password" name="txtContraseña" id="txtContraseña" required="" placeholder="--Digite la contraseña de usuario--">
 								</div>
 								<div class="col-md-6 col-lg-6 col-sm-12">
-									<b><label class="control-label">Confirmar Contraseña</label></b>
+									<b><label class="control-label">Confirmar contraseña</label></b>
 									<input class="form-control" type="password" name="txtConfirmar" id="txtConfirmar" required="" placeholder="--Digite la contraseña de usuario--">
 								</div>
 							</div>
@@ -332,7 +332,7 @@ $tecnico=new Tecnico();
                 Swal.fire({
                     type:"warning",
                     title:"Error",
-                    text: "Debe completar todos los campos para poder ingresar un nuevo tecnico",
+                    text: "Debe completar todos los campos para poder ingresar un nuevo técnico",
                     confirmButtonText:"Confirmar",
                  });
             }else{
@@ -394,7 +394,7 @@ $tecnico=new Tecnico();
 	                        cancelButtonColor:"red",
 	                        confirmButtonColor:"green",
 	                        cancelButtonText:"Cancelar",
-	                        confirmButtonText:"Si, Modificar.",
+	                        confirmButtonText:"Sí, Modificar.",
 	                }).then((result)=>{
 	                    if(result.value){
 	                        $("#miform").submit();                          
@@ -434,7 +434,7 @@ $tecnico=new Tecnico();
                         cancelButtonColor:"red",
                         confirmButtonColor:"green",
                         cancelButtonText:"Cancelar",
-                        confirmButtonText:"Si, Eliminar.",
+                        confirmButtonText:"Sí, Eliminar.",
                         customClass: "swal_alert",
                     }).then((result)=>{
                     if(result.value){    

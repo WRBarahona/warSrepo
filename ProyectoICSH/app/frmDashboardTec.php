@@ -29,7 +29,7 @@ include 'clsCerrarTicket.php';
 				<div class="col-xs-4 col-md-4" style="margin-top: 30px;">
 					<?php 
 					if (isset($_SESSION["usuario"])) {
-						print "<h1 class ='display-4'; style='font-size:25px;'>Bienvenido/a. Tec.<b>".$_SESSION["usuario"]["nombUsuario"]. "</b></h1>";
+						print "<h1 class ='display-4'; style='font-size:25px;'>Bienvenido/a. Téc.<b>".$_SESSION["usuario"]["nombUsuario"]. "</b></h1>";
 						// --*/INCIO*/ MOSTRANDO LA FOTO DEL TECNICO SEGUN SU ID -- //
 						$idUsuario =  $_SESSION["usuario"]["idUsuario"];
 
@@ -41,7 +41,7 @@ include 'clsCerrarTicket.php';
 							?>
 							<script type="text/javascript">
 								$(document).ready(function(){
-									Swal.fire('¡Bienvenido Técnico!');   
+									Swal.fire('¡Bienvenido/a Técnico!');   
 								});
 							</script>
 							<?php
@@ -68,7 +68,7 @@ include 'clsCerrarTicket.php';
 						<p class="card-tetx" align="center">
 							Actualice el estado del ticket solucionado.
 						</p>
-						<a href="frmCierreTicket.php" class="btn btn-secondary" align="">Cerrar Ticket</a>
+						<a href="frmCierreTicket.php" class="btn btn-secondary" align="">Cerrar ticket</a>
 					</div>
 				</div>
 				<div class="card">
@@ -80,19 +80,19 @@ include 'clsCerrarTicket.php';
 						<p class="card-tetx" align="center">
 							Busque y consulte sus anteriores tickets.
 						</p>
-						<a href="frmListarTicketsTecnico.php" class="btn btn-secondary" align="">Ver Mis Tickets</a>
+						<a href="frmListarTicketsTecnico.php" class="btn btn-secondary" align="">Ver mis tickets</a>
 					</div>
 				</div>	
 				<div class="card">
 					<div class="card-header">
-						<h4 class="card-title" align="center">LOGUOT</h4>
+						<h4 class="card-title" align="center">LOGOUT</h4>
 					</div><br>
 					<img  class="rounded mx-auto d-block" class="card-img-top"  src="../img/cerrarSesion.png"><br>
 					<div class="card-body" align="center" style="background-color: #ECEFF1">				
 						<p class="card-tetx" align="center">
 							Cerrar sesión activa.
 						</p>
-						<a href="acceso.php?cerrar=true'" class="btn btn-danger" align="">Cerrar Sesión</a>
+						<a href="acceso.php?cerrar=true'" class="btn btn-danger" align="">Cerrar sesión</a>
 					</div>
 				</div>		
 			</div>
